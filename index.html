@@ -4,33 +4,65 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Softexel Tailwind App</title>
-    <link href="./dist/output.css" rel="stylesheet" />
+
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
+
+    <!-- Your own CSS (Optional) -->
+    <link href="./dist/output.css" rel="stylesheet" />
   </head>
 
-  <body class="bg-white text-gray-900">
+  <body class="bg-gray-100">
+    <!-- Sections will load here -->
     <div id="navbar"></div>
     <div id="hero"></div>
-    <div id="swiper"></div>
+    <div id="team" class="mt-20"></div>
 
     <div id="footer"></div>
 
+    <!-- Swiper JS -->
+    <script src="/js/swiper-bundle.min.js"></script>
+
+    <!-- Section Loader & Swiper Initialization -->
     <script>
       async function loadSection(id, url) {
-        const res = await fetch(url);
-        if (!res.ok) {
-          console.error(`Failed to load ${url}: ${res.statusText}`);
-          return;
+        try {
+          const res = await fetch(url);
+          if (!res.ok) throw new Error(`${url} not found`);
+          const html = await res.text();
+          document.getElementById(id).innerHTML = html;
+        } catch (error) {
+          console.error(error);
         }
-        const html = await res.text();
-        document.getElementById(id).innerHTML = html;
       }
 
-      // Load sections
-      loadSection("navbar", "navbar.html");
-      loadSection("hero", "hero.html");
-      loadSection("swiper", "swiper.html");
-      loadSection("footer", "footer.html");
+      async function initializePage() {
+        await loadSection("navbar", "navbar.html");
+        await loadSection("hero", "hero.html");
+        await loadSection("team", "team.html");
+        await loadSection("footer", "footer.html");
+
+        // ✅ Initialize Swiper after all sections loaded
+        const swiper = new Swiper(".client-swiper", {
+          slidesPerView: 3,
+          spaceBetween: 20,
+          loop: true,
+          navigation: {
+            nextEl: "#nextBtn",
+            prevEl: "#prevBtn",
+          },
+          breakpoints: {
+            640: { slidesPerView: 2 },
+            1024: { slidesPerView: 4 },
+          },
+        });
+        console.log("Swiper Initialized ✅");
+      }
+
+      initializePage();
     </script>
   </body>
 </html>
