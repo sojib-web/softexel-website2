@@ -1,47 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Softexel Tailwind App</title>
+    <link href="./dist/output.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Softexel Tailwind App</title>
-  <link href="./dist/output.css" rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
+  <body class="bg-white text-gray-900">
+    <div id="navbar"></div>
+    <div id="hero"></div>
+    <div id="swiper"></div>
 
-<body class="bg-white text-gray-900">
+    <div id="footer"></div>
 
-  <div id="navbar"></div>
-  <div id="hero"></div>
-  <div id="swiper"></div>
-
-
-  <div id="footer"></div>
-
-
-
-
-
-
-  <script>
-    async function loadSection(id, url) {
-      const res = await fetch(url);
-      if (!res.ok) {
-        console.error(`Failed to load ${url}: ${res.statusText}`);
-        return;
+    <script>
+      async function loadSection(id, url) {
+        const res = await fetch(url);
+        if (!res.ok) {
+          console.error(`Failed to load ${url}: ${res.statusText}`);
+          return;
+        }
+        const html = await res.text();
+        document.getElementById(id).innerHTML = html;
       }
-      const html = await res.text();
-      document.getElementById(id).innerHTML = html;
-    }
 
-    // Load sections
-    loadSection('navbar', 'navbar.html');
-    loadSection('hero', 'hero.html');
-    loadSection('swiper', 'swiper.html');
-    loadSection('footer', 'footer.html');
-  </script>
-
-
-</body>
-
+      // Load sections
+      loadSection("navbar", "navbar.html");
+      loadSection("hero", "hero.html");
+      loadSection("swiper", "swiper.html");
+      loadSection("footer", "footer.html");
+    </script>
+  </body>
 </html>
