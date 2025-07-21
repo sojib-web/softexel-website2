@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+
+
+
+/* npx tailwindcss -i ./style.css -o ./dist/output.css --watch এটি চালিয়ে রাখলে, আপনি যখনই style.css বা tailwind.config.js এ কিছু পরিবর্তন করবেন, অটো dist/output.css আপডেট হবে। */
