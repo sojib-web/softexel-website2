@@ -17,69 +17,97 @@
   <div id="navbar"></div>
 
 
-  <section class="relative  overflow-hidden py-24">
-    <!-- Decorative Shapes with Bounce Animation -->
-    <div class="absolute top-10 left-[45%] w-32 rotate-12 opacity-80 z-0 animate-bounce">
-      <img src="/assert/Softexel web/tp 2-01.png" alt="decoration" />
+<section class="relative overflow-hidden py-24 bg-gradient-to-r from-white via-blue-50 to-white">
+  <!-- ✅ Dot Background Pattern -->
+  <div class="absolute inset-0 z-0 pointer-events-none bg-[radial-gradient(#d1d5db_1px,transparent_1px)] [background-size:20px_20px] opacity-60"></div>
+
+  <!-- ✅ Decorative Shapes with Soft Bounce Animation -->
+  <div class="absolute top-10 left-[45%] w-32 rotate-12 opacity-80 z-10 animate-soft-bounce">
+    <img src="/assert/Softexel web/tp 2-01.png" alt="decoration" />
+  </div>
+  <div class="absolute bottom-10 left-1/4 w-28 rotate-45 opacity-80 z-10 animate-soft-bounce delay-200">
+    <img src="/assert/Softexel web/tp 2-01.png" alt="decoration" />
+  </div>
+
+  <!-- ✅ Main Content -->
+  <div class="relative z-20 max-w-7xl mx-auto px-6 flex flex-col-reverse md:flex-row items-center gap-14">
+    <!-- Left Content -->
+    <div class="w-full md:w-1/2 text-center md:text-left">
+      <h2 class="text-5xl font-bold leading-tight text-gray-900 mb-6">
+        Empowering Tomorrow
+        <div><span class="text-black">with Next-Gen</span></div>
+        <div><span class="text-yellow-500">Software Solutions</span></div>
+      </h2>
+      <p class="text-lg text-gray-600 mb-8 max-w-md mx-auto md:mx-0">
+        We deliver cutting-edge software products to scale your business with speed, precision, and creativity.
+      </p>
+      <button
+        class="bg-yellow-500 text-black font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-yellow-400 transition">
+        Get Started
+      </button>
     </div>
-    <div class="absolute bottom-10 left-1/4 w-28 rotate-45 opacity-80 z-0 animate-bounce delay-200">
-      <img src="/assert/Softexel web/tp 2-01.png" alt="decoration" />
-    </div>
 
-    <!-- Main Content -->
-    <div class="relative z-10 max-w-7xl mx-auto px-6 flex flex-col-reverse md:flex-row items-center gap-14">
+    <!-- Right Content -->
+    <div class="w-full md:w-1/2 relative">
+      <!-- Decorative Background -->
+      <img src="/assert/Softexel web/OurMissionImg.png" alt="Background"
+        class="absolute -right-52 -top-28 w-[750px] opacity-70 pointer-events-none z-10" />
 
-      <!-- Left Content -->
-      <div class="w-full md:w-1/2 text-center md:text-left">
-        <h2 class="text-5xl font-bold leading-tight text-gray-900 mb-6">
-          Empowering Tomorrow
-          <div><span class="text-black">with Next-Gen</span></div>
-          <div><span class="text-yellow-500">Software Solutions</span></div>
-        </h2>
-        <p class="text-lg text-gray-600 mb-8 max-w-md mx-auto md:mx-0">
-          We deliver cutting-edge software products to scale your business with speed, precision, and creativity.
-        </p>
-        <button
-          class="bg-yellow-500 text-black font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-yellow-400 transition">
-          Get Started
-        </button>
-      </div>
+      <!-- Video Box -->
+      <div class="relative rounded-3xl overflow-hidden shadow-2xl z-20 border-4 border-white">
+        <iframe class="w-full h-[300px] md:h-[400px]" src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+          title="YouTube video" frameborder="0"
+          allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-      <!-- Right Content -->
-      <div class="w-full md:w-1/2 relative">
-        <!-- Decorative Background -->
-        <img src="/assert/Softexel web/OurMissionImg.png" alt="Background"
-          class="absolute -right-52 -top-28 w-[750px] opacity-70 pointer-events-none z-0" />
-
-        <!-- Video Box -->
-        <div class="relative rounded-3xl overflow-hidden shadow-2xl z-10 border-4 border-white">
-          <iframe class="w-full h-[300px] md:h-[400px]" src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-            title="YouTube video" frameborder="0"
-            allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-          <!-- Badge -->
-          <div class="absolute bottom-4 right-4">
-            <div class="relative w-24 h-24 sm:w-28 sm:h-28 rounded-lg overflow-hidden">
-              <div class="absolute inset-0 bg-yellow-400 z-0"></div>
-              <div class="absolute top-0 right-0 w-full h-full bg-yellow-500 rounded-bl-full z-0"></div>
-              <div class="relative z-10 flex flex-col items-center justify-center h-full text-black text-center px-2">
-                <h2 class="text-2xl sm:text-3xl font-extrabold">3+</h2>
-                <p class="text-xs sm:text-sm font-semibold leading-tight">
-                  Years of<br />Success
-                </p>
-              </div>
+        <!-- Badge -->
+        <div class="absolute bottom-4 right-4">
+          <div class="relative w-24 h-24 sm:w-28 sm:h-28 rounded-lg overflow-hidden">
+            <div class="absolute inset-0 bg-yellow-400 z-0"></div>
+            <div class="absolute top-0 right-0 w-full h-full bg-yellow-500 rounded-bl-full z-0"></div>
+            <div class="relative z-10 flex flex-col items-center justify-center h-full text-black text-center px-2">
+              <h2 class="text-2xl sm:text-3xl font-extrabold">3+</h2>
+              <p class="text-xs sm:text-sm font-semibold leading-tight">
+                Years of<br />Success
+              </p>
             </div>
           </div>
         </div>
       </div>
-
     </div>
-  </section>
+  </div>
+</section>
+
+<!-- ✅ Custom Soft Bounce Animation -->
+<style>
+  @keyframes soft-bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-12px);
+    }
+  }
+
+  .animate-soft-bounce {
+    animation: soft-bounce 5s ease-in-out infinite;
+  }
+
+  .delay-200 {
+    animation-delay: 0.2s;
+  }
+</style>
+
+
 
 
 
   <!--Solutions for Your Digital Business satrt   -->
-  <section class="text-center  px-4">
+  <section class="text-center relative px-4 bg-gradient-to-r from-white via-blue-50 to-white">
+
+      <!-- Background Dot Pattern -->
+      <div
+        class="absolute inset-0 bg-[radial-gradient(#d1d5db_1px,transparent_1px)] [background-size:20px_20px] opacity-60"
+      ></div>
     <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 inline-block relative">
       Solutions for Your Digital Business
       <!-- Yellow underline -->
@@ -93,7 +121,12 @@
     </p>
   </section>
 
-  <section class="bg-[#fefefc] px-4 relative overflow-hidden pb-7">
+  <section class="bg-[#fefefc] px-4 relative overflow-hidden pb-7 bg-gradient-to-r from-white via-blue-50 to-white">
+
+      <!-- Background Dot Pattern -->
+      <div
+        class="absolute inset-0 bg-[radial-gradient(#d1d5db_1px,transparent_1px)] [background-size:20px_20px] opacity-60"
+      ></div>
 
     <!-- Custom Animation -->
     <style>
@@ -217,87 +250,87 @@
 
 
   <!-- Industry Cards start  -->
-  <section class="bg-white  px-4 mb-5 ">
-    <div class="max-w-7xl mx-auto  rounded-3xl shadow-lg p-8 ">
-      <!-- Title Center -->
-      <div class="text-center mb-8">
-        <h2 class="text-3xl font-extrabold text-gray-900 mb-2">
-          Industry We Serve
-        </h2>
-        <div class="h-1 w-24 bg-yellow-400 mx-auto rounded"></div>
-      </div>
+ <section class="relative px-4 py-16 bg-gradient-to-r from-white via-blue-50 to-white overflow-hidden">
+  <!-- Background Dot Pattern -->
+  <div class="absolute inset-0 z-0 pointer-events-none bg-[radial-gradient(#d1d5db_1px,transparent_1px)] [background-size:20px_20px] opacity-60"></div>
 
-      <!-- Button Right -->
-      <div class="flex justify-end mb-8">
-        <button
-          class="bg-yellow-400 text-black font-semibold px-6 py-2 rounded-lg shadow hover:bg-yellow-500 transition">
-          View All
-        </button>
-      </div>
-
-
-
-      <!-- Industry Cards -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-
-        <!-- Card 1 -->
-        <div class="flex items-center bg-white p-5 rounded-xl border hover:shadow-lg transition">
-          <img src="/assert/Softexel web/icons/ecommerce (1).png" alt="E-Commerce" class="w-16 h-16 mr-4 object-cover">
-          <h3 class="font-bold text-lg text-gray-800">E-Commerce</h3>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="flex items-center bg-white p-5 rounded-xl border hover:shadow-lg transition">
-          <img src="/assert/Softexel web/icons/online-medical.png" alt="Health Care"
-            class="w-16 h-16 mr-4 object-cover">
-          <h3 class="font-bold text-lg text-gray-800">Health Care</h3>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="flex items-center bg-white p-5 rounded-xl border hover:shadow-lg transition">
-          <img src="/assert/Softexel web/icons/automotive.png" alt="Hospital" class="w-16 h-16 mr-4 object-cover">
-          <h3 class="font-bold text-lg text-gray-800">Automotive</h3>
-        </div>
-
-        <!-- Card 4 -->
-        <div class="flex items-center bg-white p-5 rounded-xl border hover:shadow-lg transition">
-          <img src="/assert/Softexel web/icons/education.png" alt="Restaurant" class="w-16 h-16 mr-4 object-cover">
-          <h3 class="font-bold text-lg text-gray-800">Education</h3>
-        </div>
-
-        <div class="flex items-center bg-white p-5 rounded-xl border hover:shadow-lg transition">
-          <img src="/assert/Softexel web/icons/property.png" alt="Restaurant" class="w-16 h-16 mr-4 object-cover">
-          <h3 class="font-bold text-lg text-gray-800">Real-Estate</h3>
-        </div>
-
-
-        <div class="flex items-center bg-white p-5 rounded-xl border hover:shadow-lg transition">
-          <img src="/assert/Softexel web/icons/online-pharmacy.png" alt="Restaurant"
-            class="w-16 h-16 mr-4 object-cover">
-          <h3 class="font-bold text-lg text-gray-800">Pharmacy</h3>
-        </div>
-        <div class="flex items-center bg-white p-5 rounded-xl border hover:shadow-lg transition">
-          <img src="/assert/Softexel web/icons/concierge-service.png" alt="Restaurant"
-            class="w-16 h-16 mr-4 object-cover">
-          <h3 class="font-bold text-lg text-gray-800">Hospitality</h3>
-        </div>
-        <div class="flex items-center bg-white p-5 rounded-xl border hover:shadow-lg transition">
-          <img src="/assert/Softexel web/icons/personal-data.png" alt="Restaurant" class="w-16 h-16 mr-4 object-cover">
-          <h3 class="font-bold text-lg text-gray-800">Corporate Industry</h3>
-        </div>
-
-
-      </div>
+  <!-- Main Container -->
+  <div class="relative z-10 max-w-7xl mx-auto rounded-3xl shadow-lg p-8 bg-white">
+    
+    <!-- Title Center -->
+    <div class="text-center mb-8">
+      <h2 class="text-3xl font-extrabold text-gray-900 mb-2">
+        Industry We Serve
+      </h2>
+      <div class="h-1 w-24 bg-yellow-400 mx-auto rounded"></div>
     </div>
 
-  </section>
+    <!-- Button Right -->
+    <div class="flex justify-end mb-8">
+      <button class="bg-yellow-400 text-black font-semibold px-6 py-2 rounded-lg shadow hover:bg-yellow-500 transition">
+        View All
+      </button>
+    </div>
+
+    <!-- Industry Cards Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+      <!-- Card Template -->
+      <div class="flex items-center bg-white p-5 rounded-xl border hover:shadow-lg transition">
+        <img src="/assert/Softexel web/icons/ecommerce (1).png" alt="E-Commerce" class="w-16 h-16 mr-4 object-cover">
+        <h3 class="font-bold text-lg text-gray-800">E-Commerce</h3>
+      </div>
+
+      <div class="flex items-center bg-white p-5 rounded-xl border hover:shadow-lg transition">
+        <img src="/assert/Softexel web/icons/online-medical.png" alt="Health Care" class="w-16 h-16 mr-4 object-cover">
+        <h3 class="font-bold text-lg text-gray-800">Health Care</h3>
+      </div>
+
+      <div class="flex items-center bg-white p-5 rounded-xl border hover:shadow-lg transition">
+        <img src="/assert/Softexel web/icons/automotive.png" alt="Automotive" class="w-16 h-16 mr-4 object-cover">
+        <h3 class="font-bold text-lg text-gray-800">Automotive</h3>
+      </div>
+
+      <div class="flex items-center bg-white p-5 rounded-xl border hover:shadow-lg transition">
+        <img src="/assert/Softexel web/icons/education.png" alt="Education" class="w-16 h-16 mr-4 object-cover">
+        <h3 class="font-bold text-lg text-gray-800">Education</h3>
+      </div>
+
+      <div class="flex items-center bg-white p-5 rounded-xl border hover:shadow-lg transition">
+        <img src="/assert/Softexel web/icons/property.png" alt="Real-Estate" class="w-16 h-16 mr-4 object-cover">
+        <h3 class="font-bold text-lg text-gray-800">Real-Estate</h3>
+      </div>
+
+      <div class="flex items-center bg-white p-5 rounded-xl border hover:shadow-lg transition">
+        <img src="/assert/Softexel web/icons/online-pharmacy.png" alt="Pharmacy" class="w-16 h-16 mr-4 object-cover">
+        <h3 class="font-bold text-lg text-gray-800">Pharmacy</h3>
+      </div>
+
+      <div class="flex items-center bg-white p-5 rounded-xl border hover:shadow-lg transition">
+        <img src="/assert/Softexel web/icons/concierge-service.png" alt="Hospitality" class="w-16 h-16 mr-4 object-cover">
+        <h3 class="font-bold text-lg text-gray-800">Hospitality</h3>
+      </div>
+
+      <div class="flex items-center bg-white p-5 rounded-xl border hover:shadow-lg transition">
+        <img src="/assert/Softexel web/icons/personal-data.png" alt="Corporate Industry" class="w-16 h-16 mr-4 object-cover">
+        <h3 class="font-bold text-lg text-gray-800">Corporate Industry</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
   <!-- Industry Cards end  -->
 
 
 
 
   <!-- service section start  -->
-  <section class="relative py-16 px-4 bg-white overflow-hidden">
+  <section class="relative py-16 px-4 bg-white overflow-hidden bg-gradient-to-r from-white via-blue-50 to-white">
+
+      <!-- Background Dot Pattern -->
+      <div
+        class="absolute inset-0 bg-[radial-gradient(#d1d5db_1px,transparent_1px)] [background-size:20px_20px] opacity-60"
+      ></div>
 
     <!-- 🟡 Yellow Background Shape -->
     <style>
@@ -409,7 +442,12 @@
 
   <!-- <div id="swiper"></div> -->
   <!-- review section  -->
-  <section class="relative py-16 px-4 bg-white overflow-hidden">
+  <section class="relative py-16 px-4 bg-white overflow-hidden bg-gradient-to-r from-white via-blue-50 to-white">
+
+      <!-- Background Dot Pattern -->
+      <div
+        class="absolute inset-0 bg-[radial-gradient(#d1d5db_1px,transparent_1px)] [background-size:20px_20px] opacity-60"
+      ></div>
 
     <style>
       @keyframes floatRotate {
@@ -495,73 +533,39 @@
 
 
 
-  <section class="px-4 py-16 ">
-      <div
-        class="max-w-7xl mx-auto bg-white rounded-3xl shadow-lg p-8 space-y-6 relative"
-      >
-        <h2 class="text-2xl text-center font-extrabold text-gray-900">
-          Our Trusted Partners
-        </h2>
-        <div class="relative">
-          <div class="swiper client-swiper">
-            <div class="swiper-wrapper">
-              <div
-                class="swiper-slide shrink-0 flex items-center justify-center border rounded-lg p-8 text-lg font-bold text-gray-800 min-w-[180px]"
-              >
-                LOGO 1
-              </div>
-              <div
-                class="swiper-slide shrink-0 flex items-center justify-center border rounded-lg p-8 text-lg font-bold text-gray-800 min-w-[180px]"
-              >
-                LOGO 2
-              </div>
-              <div
-                class="swiper-slide shrink-0 flex items-center justify-center border rounded-lg p-8 text-lg font-bold text-gray-800 min-w-[180px]"
-              >
-                LOGO 3
-              </div>
-              <div
-                class="swiper-slide shrink-0 flex items-center justify-center border rounded-lg p-8 text-lg font-bold text-gray-800 min-w-[180px]"
-              >
-                LOGO 4
-              </div>
-              <div
-                class="swiper-slide shrink-0 flex items-center justify-center border rounded-lg p-8 text-lg font-bold text-gray-800 min-w-[180px]"
-              >
-                LOGO 5
-              </div>
-              <div
-                class="swiper-slide shrink-0 flex items-center justify-center border rounded-lg p-8 text-lg font-bold text-gray-800 min-w-[180px]"
-              >
-                LOGO 6
-              </div>
-            </div>
+  <section class="relative px-4 py-16 bg-gradient-to-r from-white via-blue-50 to-white overflow-hidden">
 
-            <!-- Navigation -->
-            <button
-              id="prevBtn"
-              class="absolute left-0 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full"
-            >
-              <img
-                src="/assert/Softexel web/icons/arrow.png"
-                alt=""
-                class="w-5 h-5"
-              />
-            </button>
-            <button
-              id="nextBtn"
-              class="absolute right-0 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full"
-            >
-              <img
-                src="/assert/Softexel web/icons/arrow.png"
-                alt=""
-                class="w-5 h-5"
-              />
-            </button>
-          </div>
+  <!-- ✅ Dot Background Pattern -->
+  <div class="absolute inset-0 bg-[radial-gradient(#d1d5db_1px,transparent_1px)] [background-size:20px_20px] opacity-60 pointer-events-none z-0"></div>
+
+  <!-- ✅ Main Card Content -->
+  <div class="relative z-10 max-w-7xl mx-auto bg-white rounded-3xl shadow-lg p-8 space-y-6">
+    <h2 class="text-2xl text-center font-extrabold text-gray-900">Our Trusted Partners</h2>
+
+    <!-- ✅ Swiper Container -->
+    <div class="relative">
+      <div class="swiper client-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide flex items-center justify-center border rounded-lg p-8 text-lg font-bold text-gray-800 min-w-[180px]">LOGO 1</div>
+          <div class="swiper-slide flex items-center justify-center border rounded-lg p-8 text-lg font-bold text-gray-800 min-w-[180px]">LOGO 2</div>
+          <div class="swiper-slide flex items-center justify-center border rounded-lg p-8 text-lg font-bold text-gray-800 min-w-[180px]">LOGO 3</div>
+          <div class="swiper-slide flex items-center justify-center border rounded-lg p-8 text-lg font-bold text-gray-800 min-w-[180px]">LOGO 4</div>
+          <div class="swiper-slide flex items-center justify-center border rounded-lg p-8 text-lg font-bold text-gray-800 min-w-[180px]">LOGO 5</div>
+          <div class="swiper-slide flex items-center justify-center border rounded-lg p-8 text-lg font-bold text-gray-800 min-w-[180px]">LOGO 6</div>
         </div>
+
+        <!-- ✅ Navigation Arrows -->
+        <button id="prevBtn" class="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-white shadow p-2 rounded-full hover:scale-105 transition">
+          <img src="/assert/Softexel web/icons/arrow.png" alt="Previous" class="w-5 h-5 rotate-180" />
+        </button>
+        <button id="nextBtn" class="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-white shadow p-2 rounded-full hover:scale-105 transition">
+          <img src="/assert/Softexel web/icons/arrow.png" alt="Next" class="w-5 h-5" />
+        </button>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
+
     <!-- ✅ First Load Swiper JS -->
     <script src="/js/swiper-bundle.min.js"></script>
 
