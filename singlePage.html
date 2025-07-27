@@ -1,521 +1,918 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <style>
+      @keyframes bounceCustom {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
 
-  <!-- Swiper CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-  <style>
-    @keyframes bounceCustom {
-
-      0%,
-      100% {
-        transform: translateY(0);
+        50% {
+          transform: translateY(-25px);
+        }
       }
 
-      50% {
-        transform: translateY(-25px);
+      .bounce {
+        animation: bounceCustom 2s infinite;
       }
-    }
+    </style>
+  </head>
 
-    .bounce {
-      animation: bounceCustom 2s infinite;
-    }
-  </style>
-</head>
+  <body>
+    <!-- Navbar will load here -->
+    <div id="navbar"></div>
 
-<body>
-  <!-- Navbar will load here -->
-  <div id="navbar"></div>
+    <!-- 🎯 Responsive Banner Section -->
+    <section class="w-full relative overflow-hidden">
+      <img
+        src="/assert/Softexel web/photos/banner.jpeg"
+        alt="Banner"
+        class="w-full h-auto object-cover"
+      />
+    </section>
 
-
-
-  <!-- 🎯 Responsive Banner Section -->
-  <section class="w-full relative overflow-hidden">
-    <img src="/assert/Softexel web/photos/banner.jpeg" alt="Banner" class="w-full h-auto object-cover" />
-  </section>
-
-
-  <section class="px-4 py-10 ">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-
-      <!-- Card 1 -->
-      <div class="flex items-center bg-white rounded-xl shadow-lg overflow-hidden p-4">
-        <img src="/assert/Softexel web/icons/headset.png" alt="Image 1" class="w-12 h-12 object-contain mr-4">
-        <div>
-          <h3 class="text-lg font-semibold mb-1">ফ্রী টেকনিক্যাল সাপোর্ট</h3>
-          <p class="text-gray-600 text-sm">আমাদের ডেভেলপকৃত সাইটে আজীবন ফ্রী টেকনিক্যাল সাপোর্ট</p>
-        </div>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="flex items-center bg-white rounded-xl shadow-lg overflow-hidden p-4">
-        <img src="/assert/Softexel web/icons/web (1).png" alt="Image 2" class="w-12 h-12 object-contain mr-4">
-        <div>
-          <h3 class="text-lg font-semibold mb-1">ফিচার ডেভেলপমেন্ট</h3>
-          <p class="text-gray-600 text-sm">আলোচনা সাপেক্ষে যেকোন ধরনের কাষ্টমাইজেশন</p>
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="flex items-center bg-white rounded-xl shadow-lg overflow-hidden p-4">
-        <img src="/assert/Softexel web/icons/debit-card.png" alt="Image 3" class="w-12 h-12 object-contain mr-4">
-        <div>
-          <h3 class="text-lg font-semibold mb-1"> পেমেন্ট সিস্টেম</h3>
-          <p class="text-gray-600 text-sm">মাত্র এককালীন পেমেন্টে বিশ লক্ষ চাকর মালার ফাংশনাল ওয়েবসাইট</p>
-        </div>
-      </div>
-
-      <!-- Card 4 -->
-      <div class="flex items-center bg-white rounded-xl shadow-lg overflow-hidden p-4">
-        <img src="/assert/Softexel web/icons/cyber-security.png" alt="Image 4" class="w-12 h-12 object-contain mr-4">
-        <div>
-          <h3 class="text-lg font-semibold mb-1">সিকিউর ওয়েবসাইট</h3>
-          <p class="text-gray-600 text-sm">জনপ্রিয় ফ্রেমওয়ার্ক লাگ্রাডল ও নিউজেএস দিয়ে তৈরী, শাক হওয়া কঠিন</p>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Grid section -->
-  <section class="px-4 sm:px-6 lg:px-8 py-10 relative overflow-hidden">
-
-    <!-- 🟡 Yellow Shape (Left) with Bounce -->
-    <div class="absolute left-[8%] top-[30%] w-[20rem] hidden md:block opacity-10 z-0 bounce">
-      <img src="/assert/Softexel web/tp 3-01.png" alt="Yellow Shape" class="w-full h-auto -rotate-12">
-    </div>
-
-    <!-- 🟡 Yellow Shape (Right) with Bounce -->
-    <div class="absolute top-[-17px] right-[-240px] rotate-45 z-0 bounce">
-      <img src="/assert/Softexel web/OurMissionImg.png" alt="Yellow Shape" class="w-full h-auto -rotate-12">
-    </div>
-
-    <div class="max-w-7xl mx-auto relative z-10">
-
-      <!-- Section Heading -->
-      <div class="text-center mb-10">
-        <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 leading-snug">
-          যে সকল গুরুত্বপূর্ণ সুবিধা পাচ্ছেন আমাদের অটোমেটেড ই-কমার্স ওয়েবসাইটে
-        </h2>
-      </div>
-
-      <!-- Cards Grid -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-
+    <section
+      class="px-4 py-10 relative bg-gradient-to-r from-white via-blue-50 to-white"
+    >
+      <div
+        class="absolute inset-0 bg-[radial-gradient(#d1d5db_1px,transparent_1px)] [background-size:20px_20px] opacity-60"
+      ></div>
+      <div
+        class="max-w-7xl relative mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+      >
         <!-- Card 1 -->
-        <div class="flex items-start bg-white rounded-xl shadow-md p-4 hover:shadow-lg transition-shadow duration-300">
-          <img src="/assert/Softexel web/icons/ux-design (1).png" alt="Image 1"
-            class="w-12 h-12 object-contain mr-4 flex-shrink-0">
+        <div
+          class="flex items-center bg-white rounded-xl shadow-lg overflow-hidden p-4"
+        >
+          <img
+            src="/assert/Softexel web/icons/headset.png"
+            alt="Image 1"
+            class="w-12 h-12 object-contain mr-4"
+          />
           <div>
-            <h3 class="text-lg font-semibold mb-1">বিজনেস ও কাস্টমার ফ্রেন্ডলি</h3>
-            <p class="text-gray-600 text-sm leading-relaxed">
-              আমাদের দীর্ঘ সময়ের ই ক্যাম বিজ্ঞানস অভিজ্ঞতা থোক সিষ্টেম চেভেলন করা ডাল্লায়
-              যা বাক্তরিকতার বারবার সকল প্রয়োজনীয় সমাধান
-              নিয়ে আসছে। লমইন এর আমেলা ছাড়াই কারিমার সান্তা অর্ডার করতে পারার এবং সবচেয়ে সহজ চেক আউট সিষ্টেম.
+            <h3
+              class="text-lg font-semibold mb-1"
+              style="font-family: 'Hind Siliguri', sans-serif"
+            >
+              ফ্রী টেকনিক্যাল সাপোর্ট
+            </h3>
+            <p
+              class="text-gray-600 text-sm"
+              style="font-family: 'Hind Siliguri', sans-serif"
+            >
+              আমাদের ডেভেলপকৃত সাইটে আজীবন ফ্রী টেকনিক্যাল সাপোর্ট
             </p>
           </div>
         </div>
 
         <!-- Card 2 -->
-        <div class="flex items-start bg-white rounded-xl shadow-md p-4 hover:shadow-lg transition-shadow duration-300">
-          <img src="/assert/Softexel web/icons/fast-time.png" alt="Image 2"
-            class="w-12 h-12 object-contain mr-4 flex-shrink-0">
+        <div
+          class="flex items-center bg-white rounded-xl shadow-lg overflow-hidden p-4"
+        >
+          <img
+            src="/assert/Softexel web/icons/web (1).png"
+            alt="Image 2"
+            class="w-12 h-12 object-contain mr-4"
+          />
           <div>
-            <h3 class="text-lg font-semibold mb-1">ফাস্ট লোডিং</h3>
-            <p class="text-gray-600 text-sm leading-relaxed">
-              দ্রুত সময়ের মধ্যে সাইট লোডিং যা কাস্টমারকে ভালো এক্সপেরিয়েন্স দিবে। লোডিং
-              ফাস্ট না হলে কাস্টমার সাইট থেকে বের হয়ে যায়
-              তাই সেল বাড়াতে নিশ্চিত করুন আপনার ওয়েবসাটের স্পিড।
+            <h3
+              class="text-lg font-semibold mb-1"
+              style="font-family: 'Hind Siliguri', sans-serif"
+            >
+              ফিচার ডেভেলপমেন্ট
+            </h3>
+            <p
+              class="text-gray-600 text-sm"
+              style="font-family: 'Hind Siliguri', sans-serif"
+            >
+              আলোচনা সাপেক্ষে যেকোন ধরনের কাষ্টমাইজেশন
             </p>
           </div>
         </div>
 
         <!-- Card 3 -->
-        <div class="flex items-start bg-white rounded-xl shadow-md p-4 hover:shadow-lg transition-shadow duration-300">
-          <img src="/assert/Softexel web/icons/delivery.png" alt="Image 3"
-            class="w-12 h-12 object-contain mr-4 flex-shrink-0">
+        <div
+          class="flex items-center bg-white rounded-xl shadow-lg overflow-hidden p-4"
+        >
+          <img
+            src="/assert/Softexel web/icons/debit-card.png"
+            alt="Image 3"
+            class="w-12 h-12 object-contain mr-4"
+          />
           <div>
-            <h3 class="text-lg font-semibold mb-1">কুরিয়ার এপিআই</h3>
-            <p class="text-gray-600 text-sm leading-relaxed">
-              স্টেডফাস্ট, পাঠাও, ও রেডএক্স এ এক ক্লিকে সকল পার্সেল সাবমিট করতে পারবেন। সেই
-              সাথে রয়েছে ফ্রড কাষ্টমার চেকিং ও অটোমেশনের সুবিধা।
+            <h3
+              class="text-lg font-semibold mb-1"
+              style="font-family: 'Hind Siliguri', sans-serif"
+            >
+              পেমেন্ট সিস্টেম
+            </h3>
+            <p
+              class="text-gray-600 text-sm"
+              style="font-family: 'Hind Siliguri', sans-serif"
+            >
+              মাত্র এককালীন পেমেন্টে বিশ লক্ষ চাকর মালার ফাংশনাল ওয়েবসাইট
             </p>
           </div>
         </div>
 
         <!-- Card 4 -->
-        <div class="flex items-start bg-white rounded-xl shadow-md p-4 hover:shadow-lg transition-shadow duration-300">
-          <img src="/assert/Softexel web/icons/landing-page.png" alt="Image 4"
-            class="w-12 h-12 object-contain mr-4 flex-shrink-0">
+        <div
+          class="flex items-center bg-white rounded-xl shadow-lg overflow-hidden p-4"
+        >
+          <img
+            src="/assert/Softexel web/icons/cyber-security.png"
+            alt="Image 4"
+            class="w-12 h-12 object-contain mr-4"
+          />
           <div>
-            <h3 class="text-lg font-semibold mb-1">আনলিমিটেড ল্যান্ডিং পেইজ</h3>
-            <p class="text-gray-600 text-sm leading-relaxed">
-              কোডিং এর দক্ষতা ছাড়াই আনলিমিটেড ল্যান্ডিং পেইজ তৈরি করতে পারতেন। বিশেষ কিছু
-              প্রাডাক্টের সেলস এর জন্য ল্যান্ডিং পেইজ ভালা যেমন মেডিসিন, নাকেট, অরগানিক দ্রুত ইত্যাদি।
+            <h3
+              class="text-lg font-semibold mb-1"
+              style="font-family: 'Hind Siliguri', sans-serif"
+            >
+              সিকিউর ওয়েবসাইট
+            </h3>
+            <p
+              class="text-gray-600 text-sm"
+              style="font-family: 'Hind Siliguri', sans-serif"
+            >
+              জনপ্রিয় ফ্রেমওয়ার্ক লাگ্রাডল ও নিউজেএস দিয়ে তৈরী, শাক হওয়া কঠিন
             </p>
           </div>
         </div>
-
-        <!-- Card 5 -->
-        <div class="flex items-start bg-white rounded-xl shadow-md p-4 hover:shadow-lg transition-shadow duration-300">
-          <img src="/assert/Softexel web/icons/inventory.png" alt="Image 5"
-            class="w-12 h-12 object-contain mr-4 flex-shrink-0">
-          <div>
-            <h3 class="text-lg font-semibold mb-1">সহজ অর্ডার ম্যানেজমেন্ট</h3>
-            <p class="text-gray-600 text-sm leading-relaxed">
-              আমাদের ফাংশনাল অর্ডার ম্যানেজমেন্ট সিষ্টেম দৈনিক হাজার হাজার আন্ডার কন
-              ব্যানার না। এক ক্লিণক সকল ইন ভয়েস প্রিন্ট, নিকমন লিষ্ট, কোরিয়ার সারটিসট ফিল্টারিং সহ রাজস্ব। काही विधা।
-            </p>
-          </div>
-        </div>
-
-        <!-- Card 6 -->
-        <div class="flex items-start bg-white rounded-xl shadow-md p-4 hover:shadow-lg transition-shadow duration-300">
-          <img src="/assert/Softexel web/icons/mobile-app.png" alt="Image 6"
-            class="w-12 h-12 object-contain mr-4 flex-shrink-0">
-          <div>
-            <h3 class="text-lg font-semibold mb-1">স্টক ও একাউন্ট ম্যানেজ</h3>
-            <p class="text-gray-600 text-sm leading-relaxed">
-              আমাদের সাইট ব্যবহার করলে আপনার আলাদা করে স্টক ম্যানেজমেন্ট ও একাউন্টিং
-              সফটওয়্যার ব্যবহার করতে হবে না। এখানে রয়েছে অফিস সেল, হোলসেল, সাপ্লায়ার ও পারচেজ, এমপ্লয়ি সেলারি, বাকি
-              লেনদেন, লোন, ইনভেস্টমেন্টসহ, একাধিক অ্যাকাউন্ট ম্যানেজ এর সুবিধা।
-            </p>
-          </div>
-        </div>
-
-        <!-- Card 7 -->
-        <div class="flex items-start bg-white rounded-xl shadow-md p-4 hover:shadow-lg transition-shadow duration-300">
-          <img src="/assert/Softexel web/icons/finder.png" alt="Image 7"
-            class="w-12 h-12 object-contain mr-4 flex-shrink-0">
-          <div>
-            <h3 class="text-lg font-semibold mb-1">ফ্রড কাস্টমার চেকার</h3>
-            <p class="text-gray-600 text-sm leading-relaxed">
-              কোন কুরিয়ারে কতগুলো অর্ডার হয়েছে, কতগুলো সফল হয়েছে, এবং কতগুলো রিটার্ন হয়েছে
-              তা দেখা যাবে।
-            </p>
-          </div>
-        </div>
-
-        <!-- Card 8 -->
-        <div class="flex items-start bg-white rounded-xl shadow-md p-4 hover:shadow-lg transition-shadow duration-300">
-          <img src="/assert/Softexel web/icons/networking.png" alt="Image 8"
-            class="w-12 h-12 object-contain mr-4 flex-shrink-0">
-          <div>
-            <h3 class="text-lg font-semibold mb-1">ইসইও & মার্কেটিং টুলস সেট-আপ</h3>
-            <p class="text-gray-600 text-sm leading-relaxed">
-              অ্যাডভান্স মার্কেটিং করার জন্য অ্যানাবল আছে সার্ভার সাইড ডাটা ট্রাকিং ও
-              পিক্সেলের মাধ্যমে ক্যাটালগে অটো প্রোডাক্ট আপলোেড সিস্টেম। সাইটের এসইও করার জন্যে অন-পেইজের টেকনিক্যাল কাজ
-              করা আছে। তাই, যেকোন সময় এইইও করতে পারবেন।
-            </p>
-          </div>
-        </div>
-
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Video section -->
-  <section class="relative px-4 py-12 bg-white" x-data="{ openModal: false }">
-    <!-- Yellow Shapes (hidden on mobile) -->
-    <img src="/assert/Softexel web/Untitled-1-01.png"
-      class="absolute top-0 left-1/3 w-[6.5rem] rotate-12 hidden sm:block bounce" />
-    <img src="/assert/Softexel web/tp 3-01.png"
-      class="absolute top-[-1.5rem] right-[20%] w-40 -rotate-12 hidden sm:block bounce" />
-    <img src="assert/Softexel web/tp 3-01.png"
-      class="absolute left-[230px] top-[40%] w-[8.5rem] -rotate-45 hidden sm:block bounce" />
-    <img src="assert/Softexel web/tp 3-01.png"
-      class="absolute right-[215px] bottom-[10%] w-[8.5rem] rotate-45 hidden sm:block bounce" />
+    <!-- Grid section -->
+    <section
+      class="px-4 sm:px-6 lg:px-8 py-10 relative overflow-hidden bg-gradient-to-r from-white via-blue-50 to-white"
+    >
+      <div
+        class="absolute inset-0 bg-[radial-gradient(#d1d5db_1px,transparent_1px)] [background-size:20px_20px] opacity-60"
+      ></div>
+      <!-- 🟡 Yellow Shape (Left) with Bounce -->
+      <div
+        class="absolute left-[8%] top-[30%] w-[20rem] hidden md:block opacity-10 z-0 bounce"
+      >
+        <img
+          src="/assert/Softexel web/tp 3-01.png"
+          alt="Yellow Shape"
+          class="w-full h-auto -rotate-12"
+        />
+      </div>
 
-    <!-- Demo Button -->
-    <div class="text-center mb-6 relative z-10">
-      <button @click="openModal = true" class="bg-yellow-400 text-black font-bold px-6 py-2 rounded-md shadow-md">
-        ডেমো দেখতে ক্লিক করুন
-      </button>
-    </div>
+      <!-- 🟡 Yellow Shape (Right) with Bounce -->
+      <div class="absolute top-[-17px] right-[-240px] rotate-45 z-0 bounce">
+        <img
+          src="/assert/Softexel web/OurMissionImg.png"
+          alt="Yellow Shape"
+          class="w-full h-auto -rotate-12"
+        />
+      </div>
 
+      <div class="max-w-7xl mx-auto relative z-10">
+        <!-- Section Heading -->
+        <div class="text-center mb-10">
+          <h2
+            class="text-2xl sm:text-3xl font-bold text-gray-800 leading-snug"
+            style="font-family: 'Hind Siliguri', sans-serif"
+          >
+            যে সকল গুরুত্বপূর্ণ সুবিধা পাচ্ছেন আমাদের অটোমেটেড ই-কমার্স
+            ওয়েবসাইটে
+          </h2>
+        </div>
 
+        <!-- Cards Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <!-- Card 1 -->
+          <div
+            class="flex items-start bg-white rounded-xl shadow-md p-4 hover:shadow-lg transition-shadow duration-300"
+          >
+            <img
+              src="/assert/Softexel web/icons/ux-design (1).png"
+              alt="Image 1"
+              class="w-12 h-12 object-contain mr-4 flex-shrink-0"
+            />
+            <div>
+              <h3
+                class="text-lg font-semibold mb-1"
+                style="font-family: 'Hind Siliguri', sans-serif"
+              >
+                বিজনেস ও কাস্টমার ফ্রেন্ডলি
+              </h3>
+              <p
+                class="text-gray-600 text-sm leading-relaxed"
+                style="font-family: 'Hind Siliguri', sans-serif"
+              >
+                আমাদের দীর্ঘ সময়ের ই ক্যাম বিজ্ঞানস অভিজ্ঞতা থোক সিষ্টেম চেভেলন
+                করা ডাল্লায় যা বাক্তরিকতার বারবার সকল প্রয়োজনীয় সমাধান নিয়ে
+                আসছে। লমইন এর আমেলা ছাড়াই কারিমার সান্তা অর্ডার করতে পারার এবং
+                সবচেয়ে সহজ চেক আউট সিষ্টেম.
+              </p>
+            </div>
+          </div>
 
-    <!-- Video Card Container -->
-    <div
-      class="max-w-7xl mx-auto bg-white rounded-2xl shadow-md border border-yellow-100 px-4 sm:px-6 py-8 relative z-10">
-      <div class="flex justify-end mb-4">
-        <button class="text-sm bg-yellow-400 text-black px-4 py-1 rounded-md shadow-sm font-semibold">
-          View All
+          <!-- Card 2 -->
+          <div
+            class="flex items-start bg-white rounded-xl shadow-md p-4 hover:shadow-lg transition-shadow duration-300"
+          >
+            <img
+              src="/assert/Softexel web/icons/fast-time.png"
+              alt="Image 2"
+              class="w-12 h-12 object-contain mr-4 flex-shrink-0"
+            />
+            <div>
+              <h3
+                class="text-lg font-semibold mb-1"
+                style="font-family: 'Hind Siliguri', sans-serif"
+              >
+                ফাস্ট লোডিং
+              </h3>
+              <p
+                class="text-gray-600 text-sm leading-relaxed"
+                style="font-family: 'Hind Siliguri', sans-serif"
+              >
+                দ্রুত সময়ের মধ্যে সাইট লোডিং যা কাস্টমারকে ভালো এক্সপেরিয়েন্স
+                দিবে। লোডিং ফাস্ট না হলে কাস্টমার সাইট থেকে বের হয়ে যায় তাই সেল
+                বাড়াতে নিশ্চিত করুন আপনার ওয়েবসাটের স্পিড।
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="flex items-start bg-white rounded-xl shadow-md p-4 hover:shadow-lg transition-shadow duration-300"
+          >
+            <img
+              src="/assert/Softexel web/icons/delivery.png"
+              alt="Image 3"
+              class="w-12 h-12 object-contain mr-4 flex-shrink-0"
+            />
+            <div>
+              <h3
+                class="text-lg font-semibold mb-1"
+                style="font-family: 'Hind Siliguri', sans-serif"
+              >
+                কুরিয়ার এপিআই
+              </h3>
+              <p
+                class="text-gray-600 text-sm leading-relaxed"
+                style="font-family: 'Hind Siliguri', sans-serif"
+              >
+                স্টেডফাস্ট, পাঠাও, ও রেডএক্স এ এক ক্লিকে সকল পার্সেল সাবমিট করতে
+                পারবেন। সেই সাথে রয়েছে ফ্রড কাষ্টমার চেকিং ও অটোমেশনের সুবিধা।
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div
+            class="flex items-start bg-white rounded-xl shadow-md p-4 hover:shadow-lg transition-shadow duration-300"
+          >
+            <img
+              src="/assert/Softexel web/icons/landing-page.png"
+              alt="Image 4"
+              class="w-12 h-12 object-contain mr-4 flex-shrink-0"
+            />
+            <div>
+              <h3
+                class="text-lg font-semibold mb-1"
+                style="font-family: 'Hind Siliguri', sans-serif"
+              >
+                আনলিমিটেড ল্যান্ডিং পেইজ
+              </h3>
+              <p
+                class="text-gray-600 text-sm leading-relaxed"
+                style="font-family: 'Hind Siliguri', sans-serif"
+              >
+                কোডিং এর দক্ষতা ছাড়াই আনলিমিটেড ল্যান্ডিং পেইজ তৈরি করতে পারতেন।
+                বিশেষ কিছু প্রাডাক্টের সেলস এর জন্য ল্যান্ডিং পেইজ ভালা যেমন
+                মেডিসিন, নাকেট, অরগানিক দ্রুত ইত্যাদি।
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div
+            class="flex items-start bg-white rounded-xl shadow-md p-4 hover:shadow-lg transition-shadow duration-300"
+          >
+            <img
+              src="/assert/Softexel web/icons/inventory.png"
+              alt="Image 5"
+              class="w-12 h-12 object-contain mr-4 flex-shrink-0"
+            />
+            <div>
+              <h3
+                class="text-lg font-semibold mb-1"
+                style="font-family: 'Hind Siliguri', sans-serif"
+              >
+                সহজ অর্ডার ম্যানেজমেন্ট
+              </h3>
+              <p
+                class="text-gray-600 text-sm leading-relaxed"
+                style="font-family: 'Hind Siliguri', sans-serif"
+              >
+                আমাদের ফাংশনাল অর্ডার ম্যানেজমেন্ট সিষ্টেম দৈনিক হাজার হাজার
+                আন্ডার কন ব্যানার না। এক ক্লিণক সকল ইন ভয়েস প্রিন্ট, নিকমন
+                লিষ্ট, কোরিয়ার সারটিসট ফিল্টারিং সহ রাজস্ব। काही विधা।
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div
+            class="flex items-start bg-white rounded-xl shadow-md p-4 hover:shadow-lg transition-shadow duration-300"
+          >
+            <img
+              src="/assert/Softexel web/icons/mobile-app.png"
+              alt="Image 6"
+              class="w-12 h-12 object-contain mr-4 flex-shrink-0"
+            />
+            <div>
+              <h3
+                class="text-lg font-semibold mb-1"
+                style="font-family: 'Hind Siliguri', sans-serif"
+              >
+                স্টক ও একাউন্ট ম্যানেজ
+              </h3>
+              <p
+                class="text-gray-600 text-sm leading-relaxed"
+                style="font-family: 'Hind Siliguri', sans-serif"
+              >
+                আমাদের সাইট ব্যবহার করলে আপনার আলাদা করে স্টক ম্যানেজমেন্ট ও
+                একাউন্টিং সফটওয়্যার ব্যবহার করতে হবে না। এখানে রয়েছে অফিস সেল,
+                হোলসেল, সাপ্লায়ার ও পারচেজ, এমপ্লয়ি সেলারি, বাকি লেনদেন, লোন,
+                ইনভেস্টমেন্টসহ, একাধিক অ্যাকাউন্ট ম্যানেজ এর সুবিধা।
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 7 -->
+          <div
+            class="flex items-start bg-white rounded-xl shadow-md p-4 hover:shadow-lg transition-shadow duration-300"
+          >
+            <img
+              src="/assert/Softexel web/icons/finder.png"
+              alt="Image 7"
+              class="w-12 h-12 object-contain mr-4 flex-shrink-0"
+            />
+            <div>
+              <h3
+                class="text-lg font-semibold mb-1"
+                style="font-family: 'Hind Siliguri', sans-serif"
+              >
+                ফ্রড কাস্টমার চেকার
+              </h3>
+              <p
+                class="text-gray-600 text-sm leading-relaxed"
+                style="font-family: 'Hind Siliguri', sans-serif"
+              >
+                কোন কুরিয়ারে কতগুলো অর্ডার হয়েছে, কতগুলো সফল হয়েছে, এবং কতগুলো
+                রিটার্ন হয়েছে তা দেখা যাবে।
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 8 -->
+          <div
+            class="flex items-start bg-white rounded-xl shadow-md p-4 hover:shadow-lg transition-shadow duration-300"
+          >
+            <img
+              src="/assert/Softexel web/icons/networking.png"
+              alt="Image 8"
+              class="w-12 h-12 object-contain mr-4 flex-shrink-0"
+            />
+            <div>
+              <h3
+                class="text-lg font-semibold mb-1"
+                style="font-family: 'Hind Siliguri', sans-serif"
+              >
+                ইসইও & মার্কেটিং টুলস সেট-আপ
+              </h3>
+              <p
+                class="text-gray-600 text-sm leading-relaxed"
+                style="font-family: 'Hind Siliguri', sans-serif"
+              >
+                অ্যাডভান্স মার্কেটিং করার জন্য অ্যানাবল আছে সার্ভার সাইড ডাটা
+                ট্রাকিং ও পিক্সেলের মাধ্যমে ক্যাটালগে অটো প্রোডাক্ট আপলোেড
+                সিস্টেম। সাইটের এসইও করার জন্যে অন-পেইজের টেকনিক্যাল কাজ করা
+                আছে। তাই, যেকোন সময় এইইও করতে পারবেন।
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Video section -->
+    <section
+      class="relative px-4 py-12 bg-gradient-to-r from-white via-blue-50 to-white"
+      x-data="{ openModal: false } "
+    >
+      <div
+        class="absolute inset-0 bg-[radial-gradient(#d1d5db_1px,transparent_1px)] [background-size:20px_20px] opacity-60"
+      ></div>
+      <!-- Yellow Shapes (hidden on mobile) -->
+      <img
+        src="/assert/Softexel web/Untitled-1-01.png"
+        class="absolute top-0 left-1/3 w-[6.5rem] rotate-12 hidden sm:block bounce"
+      />
+      <img
+        src="/assert/Softexel web/tp 3-01.png"
+        class="absolute top-[-1.5rem] right-[20%] w-40 -rotate-12 hidden sm:block bounce"
+      />
+      <img
+        src="assert/Softexel web/tp 3-01.png"
+        class="absolute left-[230px] top-[40%] w-[8.5rem] -rotate-45 hidden sm:block bounce"
+      />
+      <img
+        src="assert/Softexel web/tp 3-01.png"
+        class="absolute right-[215px] bottom-[10%] w-[8.5rem] rotate-45 hidden sm:block bounce"
+      />
+
+      <!-- Demo Button -->
+      <div class="text-center mb-6 relative z-10">
+        <button
+          @click="openModal = true"
+          class="bg-yellow-400 text-black font-bold px-6 py-2 rounded-md shadow-md"
+          style="font-family: 'Hind Siliguri', sans-serif"
+        >
+          ডেমো দেখতে ক্লিক করুন
         </button>
       </div>
 
-      <!-- Video Grid -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        <!-- Card 1 -->
-        <div class="rounded-3xl overflow-hidden shadow-lg">
-          <iframe class="w-full h-56 sm:h-64 md:h-72 lg:h-80 rounded-3xl"
-            src="https://www.youtube.com/embed/ysz5S6PUM-U" title="Video 1" frameborder="0"
-            allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-        <!-- Card 2 -->
-        <div class="rounded-3xl overflow-hidden shadow-lg">
-          <iframe class="w-full h-56 sm:h-64 md:h-72 lg:h-80 rounded-3xl"
-            src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video 2" frameborder="0"
-            allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-        <!-- Card 3 -->
-        <div class="rounded-3xl overflow-hidden shadow-lg">
-          <iframe class="w-full h-56 sm:h-64 md:h-72 lg:h-80 rounded-3xl"
-            src="https://www.youtube.com/embed/tgbNymZ7vqY" title="Video 3" frameborder="0"
-            allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-        <!-- Card 4 -->
-        <div class="rounded-3xl overflow-hidden shadow-lg">
-          <iframe class="w-full h-56 sm:h-64 md:h-72 lg:h-80 rounded-3xl"
-            src="https://www.youtube.com/embed/oHg5SJYRHA0" title="Video 4" frameborder="0"
-            allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-        <!-- Card 5 -->
-        <div class="rounded-3xl overflow-hidden shadow-lg">
-          <iframe class="w-full h-56 sm:h-64 md:h-72 lg:h-80 rounded-3xl"
-            src="https://www.youtube.com/embed/kXYiU_JCYtU" title="Video 5" frameborder="0"
-            allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-        <!-- Card 6 -->
-        <div class="rounded-3xl overflow-hidden shadow-lg">
-          <iframe class="w-full h-56 sm:h-64 md:h-72 lg:h-80 rounded-3xl"
-            src="https://www.youtube.com/embed/3JZ_D3ELwOQ" title="Video 6" frameborder="0"
-            allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-        <!-- Card 7 -->
-        <div class="rounded-3xl overflow-hidden shadow-lg">
-          <iframe class="w-full h-56 sm:h-64 md:h-72 lg:h-80 rounded-3xl"
-            src="https://www.youtube.com/embed/e-ORhEE9VVg" title="Video 7" frameborder="0"
-            allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-        <!-- Card 8 -->
-        <div class="rounded-3xl overflow-hidden shadow-lg">
-          <iframe class="w-full h-56 sm:h-64 md:h-72 lg:h-80 rounded-3xl"
-            src="https://www.youtube.com/embed/2Vv-BfVoq4g" title="Video 8" frameborder="0"
-            allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- বিস্তারিত জানতে ভিডিও দেখুন -->
-
-  <section class="px-4 py-12 bg-gray-50">
-    <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800 mb-6">
-        বিস্তারিত জানতে ভিডিও দেখুন
-      </h2>
-
-      <!-- YouTube Video -->
-      <div class="rounded-3xl overflow-hidden shadow-lg">
-        <iframe class="w-full h-56 sm:h-64 md:h-72 lg:h-80 rounded-3xl" src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-          title="Client Review Video" frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- Review section -->
-  <section class="relative py-16 px-4 bg-white overflow-hidden">
-    <!-- 🟡 Background Shape -->
-    <div class="absolute left-[5%] top-[30%] w-[20rem] hidden md:block opacity-10">
-      <img src="/assert/Softexel web/tp 3-01.png" alt="Yellow Shape" class="w-full h-auto -rotate-12 bounce">
-    </div>
-
-    <!-- Main Content -->
-    <div class="max-w-7xl mx-auto relative z-10">
-      <!-- Title -->
-      <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">Review Videos</h2>
-        <div class="h-1 w-24 bg-yellow-400 mx-auto rounded-full"></div>
-      </div>
-
-      <!-- Responsive Video Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
-
-        <!-- Video 1 -->
-        <div class="rounded-3xl overflow-hidden shadow-lg">
-          <iframe class="w-full h-64 md:h-72 lg:h-80 rounded-3xl" src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-            title="Client Review Video" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-          </iframe>
+      <!-- Video Card Container -->
+      <div
+        class="max-w-7xl mx-auto bg-white rounded-2xl shadow-md border border-yellow-100 px-4 sm:px-6 py-8 relative z-10"
+      >
+        <div class="flex justify-end mb-4">
+          <button
+            class="text-sm bg-yellow-400 text-black px-4 py-1 rounded-md shadow-sm font-semibold"
+          >
+            View All
+          </button>
         </div>
 
-        <!-- Video 2 -->
-        <div class="rounded-3xl overflow-hidden shadow-lg">
-          <iframe class="w-full h-64 md:h-72 lg:h-80 rounded-3xl" src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-            title="Client Review Video" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-          </iframe>
-        </div>
-
-        <!-- Video 3 -->
-        <div class="rounded-3xl overflow-hidden shadow-lg">
-          <iframe class="w-full h-64 md:h-72 lg:h-80 rounded-3xl" src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-            title="Client Review Video" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-          </iframe>
-        </div>
-
-        <!-- Video 4 -->
-        <div class="rounded-3xl overflow-hidden shadow-lg">
-          <iframe class="w-full h-64 md:h-72 lg:h-80 rounded-3xl" src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-            title="Client Review Video" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-          </iframe>
+        <!-- Video Grid -->
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+        >
+          <!-- Card 1 -->
+          <div class="rounded-3xl overflow-hidden shadow-lg">
+            <iframe
+              class="w-full h-56 sm:h-64 md:h-72 lg:h-80 rounded-3xl"
+              src="https://www.youtube.com/embed/ysz5S6PUM-U"
+              title="Video 1"
+              frameborder="0"
+              allow="autoplay; encrypted-media"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <!-- Card 2 -->
+          <div class="rounded-3xl overflow-hidden shadow-lg">
+            <iframe
+              class="w-full h-56 sm:h-64 md:h-72 lg:h-80 rounded-3xl"
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              title="Video 2"
+              frameborder="0"
+              allow="autoplay; encrypted-media"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <!-- Card 3 -->
+          <div class="rounded-3xl overflow-hidden shadow-lg">
+            <iframe
+              class="w-full h-56 sm:h-64 md:h-72 lg:h-80 rounded-3xl"
+              src="https://www.youtube.com/embed/tgbNymZ7vqY"
+              title="Video 3"
+              frameborder="0"
+              allow="autoplay; encrypted-media"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <!-- Card 4 -->
+          <div class="rounded-3xl overflow-hidden shadow-lg">
+            <iframe
+              class="w-full h-56 sm:h-64 md:h-72 lg:h-80 rounded-3xl"
+              src="https://www.youtube.com/embed/oHg5SJYRHA0"
+              title="Video 4"
+              frameborder="0"
+              allow="autoplay; encrypted-media"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <!-- Card 5 -->
+          <div class="rounded-3xl overflow-hidden shadow-lg">
+            <iframe
+              class="w-full h-56 sm:h-64 md:h-72 lg:h-80 rounded-3xl"
+              src="https://www.youtube.com/embed/kXYiU_JCYtU"
+              title="Video 5"
+              frameborder="0"
+              allow="autoplay; encrypted-media"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <!-- Card 6 -->
+          <div class="rounded-3xl overflow-hidden shadow-lg">
+            <iframe
+              class="w-full h-56 sm:h-64 md:h-72 lg:h-80 rounded-3xl"
+              src="https://www.youtube.com/embed/3JZ_D3ELwOQ"
+              title="Video 6"
+              frameborder="0"
+              allow="autoplay; encrypted-media"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <!-- Card 7 -->
+          <div class="rounded-3xl overflow-hidden shadow-lg">
+            <iframe
+              class="w-full h-56 sm:h-64 md:h-72 lg:h-80 rounded-3xl"
+              src="https://www.youtube.com/embed/e-ORhEE9VVg"
+              title="Video 7"
+              frameborder="0"
+              allow="autoplay; encrypted-media"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <!-- Card 8 -->
+          <div class="rounded-3xl overflow-hidden shadow-lg">
+            <iframe
+              class="w-full h-56 sm:h-64 md:h-72 lg:h-80 rounded-3xl"
+              src="https://www.youtube.com/embed/2Vv-BfVoq4g"
+              title="Video 8"
+              frameborder="0"
+              allow="autoplay; encrypted-media"
+              allowfullscreen
+            ></iframe>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- caeosel -->
-  <section class="px-4 py-16">
-    <div class="max-w-7xl mx-auto bg-white rounded-3xl shadow-lg p-8 space-y-6 relative">
+    <!-- বিস্তারিত জানতে ভিডিও দেখুন -->
 
-      <!-- Header -->
-      <div class="flex items-center justify-between">
-        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 relative">
-          আমাদের ক্লাইন্ট সমূহ
-          <span class="block w-20 h-1 bg-yellow-400 mt-2"></span>
+    <section
+      class="relative px-4 py-12 bg-gradient-to-r from-white via-blue-50 to-white overflow-hidden"
+    >
+      <!-- Background pattern -->
+      <div
+        class="absolute inset-0 bg-[radial-gradient(#d1d5db_1px,transparent_1px)] [background-size:20px_20px] opacity-60 z-0"
+      ></div>
+
+      <!-- Main content -->
+      <div class="max-w-7xl mx-auto text-center relative z-10">
+        <h2
+          class="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800 mb-6"
+          style="font-family: 'Hind Siliguri', sans-serif"
+        >
+          বিস্তারিত জানতে ভিডিও দেখুন
         </h2>
-        <button class="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-4 py-2 rounded-lg text-sm">
-          View All
-        </button>
-      </div>
 
-      <!-- Swiper Carousel -->
-      <div class="relative">
-        <div class="swiper client-swiper">
-          <div class="swiper-wrapper">
-            <div
-              class="swiper-slide flex items-center justify-center border rounded-lg p-8 text-lg font-bold text-gray-800 min-w-[180px]">
-              LOGO 1
-            </div>
-            <div
-              class="swiper-slide flex items-center justify-center border rounded-lg p-8 text-lg font-bold text-gray-800 min-w-[180px]">
-              LOGO 2
-            </div>
-            <div
-              class="swiper-slide flex items-center justify-center border rounded-lg p-8 text-lg font-bold text-gray-800 min-w-[180px]">
-              LOGO 3
-            </div>
-            <div
-              class="swiper-slide flex items-center justify-center border rounded-lg p-8 text-lg font-bold text-gray-800 min-w-[180px]">
-              LOGO 4
-            </div>
-            <div
-              class="swiper-slide flex items-center justify-center border rounded-lg p-8 text-lg font-bold text-gray-800 min-w-[180px]">
-              LOGO 5
-            </div>
-            <div
-              class="swiper-slide flex items-center justify-center border rounded-lg p-8 text-lg font-bold text-gray-800 min-w-[180px]">
-              LOGO 6
-            </div>
-          </div>
-
-          <!-- Navigation buttons -->
-          <button id="prevBtn"
-            class="absolute left-0 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-yellow-100 hover:bg-yellow-300"
-            aria-label="Previous">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-yellow-700" fill="none" viewBox="0 0 24 24"
-              stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M15 19l-7-7 7-7" />
-            </svg>
-          </button>
-          <button id="nextBtn"
-            class="absolute right-0 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-yellow-100 hover:bg-yellow-300"
-            aria-label="Next">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-yellow-700" fill="none" viewBox="0 0 24 24"
-              stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
+        <!-- YouTube Video -->
+        <div class="rounded-3xl overflow-hidden shadow-lg">
+          <iframe
+            class="w-full h-56 sm:h-64 md:h-72 lg:h-80 rounded-3xl"
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            title="Client Review Video"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
+    <!-- Review section -->
+    <section
+      class="relative py-16 px-4 bg-gradient-to-r from-white via-blue-50 to-white overflow-hidden"
+    >
+      <!-- Background Dots -->
+      <div
+        class="absolute inset-0 bg-[radial-gradient(#d1d5db_1px,transparent_1px)] [background-size:20px_20px] opacity-60"
+      ></div>
 
+      <!-- Yellow Shape Decoration -->
+      <div
+        class="absolute left-[5%] top-[30%] w-[20rem] hidden md:block opacity-10"
+      >
+        <img
+          src="/assert/Softexel web/tp 3-01.png"
+          alt="Yellow Shape"
+          class="w-full h-auto -rotate-12 bounce"
+        />
+      </div>
 
+      <!-- Main Content -->
+      <div class="max-w-7xl mx-auto relative z-10">
+        <!-- Title -->
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">
+            Review Videos
+          </h2>
+          <div class="h-1 w-24 bg-yellow-400 mx-auto rounded-full"></div>
+        </div>
 
+        <!-- Video Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <!-- Video 1 -->
+          <div class="rounded-3xl overflow-hidden shadow-lg">
+            <iframe
+              class="w-full h-64 md:h-72 lg:h-80 rounded-3xl"
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              title="Client Review Video 1"
+              loading="lazy"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
 
+          <!-- Video 2 -->
+          <div class="rounded-3xl overflow-hidden shadow-lg">
+            <iframe
+              class="w-full h-64 md:h-72 lg:h-80 rounded-3xl"
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              title="Client Review Video 2"
+              loading="lazy"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
 
-  <!-- Footer will load here -->
-  <div id="footer"></div>
+          <!-- Video 3 -->
+          <div class="rounded-3xl overflow-hidden shadow-lg">
+            <iframe
+              class="w-full h-64 md:h-72 lg:h-80 rounded-3xl"
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              title="Client Review Video 3"
+              loading="lazy"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
 
-  <script>
-    async function loadSection(id, url) {
-      try {
-        const res = await fetch(url);
-        if (!res.ok) throw new Error(res.statusText);
-        const html = await res.text();
-        document.getElementById(id).innerHTML = html;
-      } catch (error) {
-        console.error(`Failed to load ${url}: ${error}`);
+          <!-- Video 4 -->
+          <div class="rounded-3xl overflow-hidden shadow-lg">
+            <iframe
+              class="w-full h-64 md:h-72 lg:h-80 rounded-3xl"
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              title="Client Review Video 4"
+              loading="lazy"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- caeosel -->
+    <section
+      class="px-4 py-16 relative bg-gradient-to-r from-white via-blue-50 to-white"
+    >
+      <!-- Background Dots -->
+      <div
+        class="absolute inset-0 bg-[radial-gradient(#d1d5db_1px,transparent_1px)] [background-size:20px_20px] opacity-60"
+      ></div>
+
+      <div
+        class="max-w-7xl mx-auto bg-white rounded-3xl shadow-lg p-8 space-y-6 relative"
+      >
+        <!-- Header -->
+        <div class="flex items-center justify-between">
+          <h2
+            class="text-2xl md:text-3xl font-bold text-gray-900 relative"
+            style="font-family: 'Hind Siliguri', sans-serif"
+          >
+            আমাদের ক্লাইন্ট সমূহ
+            <span class="block w-20 h-1 bg-yellow-400 mt-2"></span>
+          </h2>
+          <button
+            class="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-4 py-2 rounded-lg text-sm"
+          >
+            View All
+          </button>
+        </div>
+
+        <!-- Swiper Carousel -->
+        <div class="relative">
+          <div class="swiper client-swiper">
+            <div class="swiper-wrapper">
+              <div
+                class="swiper-slide flex items-center justify-center border rounded-lg p-8 text-lg font-bold text-gray-800 min-w-[180px]"
+              >
+                LOGO 1
+              </div>
+              <div
+                class="swiper-slide flex items-center justify-center border rounded-lg p-8 text-lg font-bold text-gray-800 min-w-[180px]"
+              >
+                LOGO 2
+              </div>
+              <div
+                class="swiper-slide flex items-center justify-center border rounded-lg p-8 text-lg font-bold text-gray-800 min-w-[180px]"
+              >
+                LOGO 3
+              </div>
+              <div
+                class="swiper-slide flex items-center justify-center border rounded-lg p-8 text-lg font-bold text-gray-800 min-w-[180px]"
+              >
+                LOGO 4
+              </div>
+              <div
+                class="swiper-slide flex items-center justify-center border rounded-lg p-8 text-lg font-bold text-gray-800 min-w-[180px]"
+              >
+                LOGO 5
+              </div>
+              <div
+                class="swiper-slide flex items-center justify-center border rounded-lg p-8 text-lg font-bold text-gray-800 min-w-[180px]"
+              >
+                LOGO 6
+              </div>
+            </div>
+
+            <!-- Navigation buttons -->
+            <button
+              id="prevBtn"
+              class="absolute left-0 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-yellow-100 hover:bg-yellow-300"
+              aria-label="Previous"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-6 h-6 text-yellow-700"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="3"
+                  d="M15 19l-7-7 7-7"
+                />
+              </svg>
+            </button>
+            <button
+              id="nextBtn"
+              class="absolute right-0 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-yellow-100 hover:bg-yellow-300"
+              aria-label="Next"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-6 h-6 text-yellow-700"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="3"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer will load here -->
+    <div id="footer"></div>
+
+    <script>
+      async function loadSection(id, url) {
+        try {
+          const res = await fetch(url);
+          if (!res.ok) throw new Error(res.statusText);
+          const html = await res.text();
+          document.getElementById(id).innerHTML = html;
+        } catch (error) {
+          console.error(`Failed to load ${url}: ${error}`);
+        }
       }
-    }
 
-    // Load navbar and footer
-    loadSection('navbar', 'navbar.html');
-    loadSection('footer', 'footer.html');
-  </script>
+      // Load navbar and footer
+      loadSection("navbar", "navbar.html");
+      loadSection("footer", "footer.html");
+    </script>
 
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
-
-
-
-
-
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-
-  <script>
-    const swiper = new Swiper(".client-swiper", {
-      slidesPerView: 4,
-      spaceBetween: 20,
-      loop: true,
-      navigation: {
-        prevEl: "#prevBtn",
-        nextEl: "#nextBtn",
-      },
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
-      breakpoints: {
-        320: {
-          slidesPerView: 1,
-          spaceBetween: 10,
+    <script>
+      const swiper = new Swiper(".client-swiper", {
+        slidesPerView: 4,
+        spaceBetween: 20,
+        loop: true,
+        navigation: {
+          prevEl: "#prevBtn",
+          nextEl: "#nextBtn",
         },
-        640: {
-          slidesPerView: 2,
-          spaceBetween: 15,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
         },
-        768: {
-          slidesPerView: 3,
-          spaceBetween: 20,
+        breakpoints: {
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 15,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+          1024: {
+            slidesPerView: 4,
+            spaceBetween: 20,
+          },
         },
-        1024: {
-          slidesPerView: 4,
-          spaceBetween: 20,
-        },
-      },
-    });
-  </script>
-</body>
+      });
+    </script>
 
+    <script>
+      async function loadNavbar() {
+        const res = await fetch("navbar.html");
+        if (res.ok) {
+          const html = await res.text();
+          document.getElementById("navbar").innerHTML = html;
+          initializeNavbarJS(); // Navbar inject হওয়ার পর JS ইনিশিয়ালাইজ করো
+        } else {
+          console.error("Navbar could not be loaded");
+        }
+      }
+
+      function initializeNavbarJS() {
+        const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        if (mobileMenuBtn && mobileMenu) {
+          mobileMenuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+          });
+        }
+
+        const servicesBtn = document.getElementById("services-button");
+        const servicesDropdown = document.getElementById("services-dropdown");
+
+        let dropdownTimeout;
+
+        const showDropdown = () => {
+          clearTimeout(dropdownTimeout);
+          servicesDropdown.classList.remove("hidden");
+        };
+
+        const hideDropdown = () => {
+          dropdownTimeout = setTimeout(() => {
+            servicesDropdown.classList.add("hidden");
+          }, 200);
+        };
+
+        if (servicesBtn && servicesDropdown) {
+          servicesBtn.addEventListener("mouseenter", showDropdown);
+          servicesBtn.addEventListener("mouseleave", hideDropdown);
+          servicesDropdown.addEventListener("mouseenter", showDropdown);
+          servicesDropdown.addEventListener("mouseleave", hideDropdown);
+        }
+      }
+
+      // Footer load
+      async function loadFooter() {
+        const res = await fetch("footer.html");
+        if (res.ok) {
+          const html = await res.text();
+          document.getElementById("footer").innerHTML = html;
+        } else {
+          console.error("Footer could not be loaded");
+        }
+      }
+
+      // Load both navbar and footer
+      window.addEventListener("DOMContentLoaded", () => {
+        loadNavbar();
+        loadFooter();
+      });
+    </script>
+  </body>
 </html>

@@ -713,5 +713,55 @@
         document.body.removeChild(link);
       });
     </script>
+
+    <script>
+      async function loadNavbar() {
+        const res = await fetch("navbar.html");
+        if (res.ok) {
+          const html = await res.text();
+          document.getElementById("navbar").innerHTML = html;
+          initializeNavbarJS(); // Navbar inject হওয়ার পর JS ইনিশিয়ালাইজ করো
+        } else {
+          console.error("Navbar could not be loaded");
+        }
+      }
+
+      // navbar.js এর কোড ফাংশনে রূপান্তর করো যাতে এটা কল করা যায়
+      function initializeNavbarJS() {
+        const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        if (mobileMenuBtn && mobileMenu) {
+          mobileMenuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+          });
+        }
+
+        const servicesBtn = document.getElementById("services-button");
+        const servicesDropdown = document.getElementById("services-dropdown");
+
+        let dropdownTimeout;
+
+        const showDropdown = () => {
+          clearTimeout(dropdownTimeout);
+          servicesDropdown.classList.remove("hidden");
+        };
+
+        const hideDropdown = () => {
+          dropdownTimeout = setTimeout(() => {
+            servicesDropdown.classList.add("hidden");
+          }, 200);
+        };
+
+        if (servicesBtn && servicesDropdown) {
+          servicesBtn.addEventListener("mouseenter", showDropdown);
+          servicesBtn.addEventListener("mouseleave", hideDropdown);
+          servicesDropdown.addEventListener("mouseenter", showDropdown);
+          servicesDropdown.addEventListener("mouseleave", hideDropdown);
+        }
+      }
+
+      loadNavbar();
+    </script>
   </body>
 </html>

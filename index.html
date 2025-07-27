@@ -10,24 +10,24 @@
 
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
-
-    <!-- Your own CSS (Optional) -->
-    <link href="./dist/output.css" rel="stylesheet" />
   </head>
 
   <body class="bg-gradient-to-r from-white via-blue-50 to-white">
-    <!-- Sections will load here -->
-    <div id="navbar" class="relative"></div>
+    <!-- Section Containers -->
+    <div id="navbar"></div>
     <div id="hero"></div>
     <div id="team" class="mt-20"></div>
-
     <div id="footer"></div>
 
-    <!-- Swiper JS -->
+    <!-- ✅ Load Swiper JS -->
     <script src="/js/swiper-bundle.min.js"></script>
 
-    <!-- Section Loader & Swiper Initialization -->
+    <!-- ✅ Navbar logic file -->
+    <script src="navbar.js"></script>
+
+    <!-- ✅ Page Initialization -->
     <script>
+      // Load section HTML into a container div
       async function loadSection(id, url) {
         try {
           const res = await fetch(url);
@@ -35,18 +35,13 @@
           const html = await res.text();
           document.getElementById(id).innerHTML = html;
         } catch (error) {
-          console.error(error);
+          console.error(`Error loading ${url}:`, error);
         }
       }
 
-      async function initializePage() {
-        await loadSection("navbar", "navbar.html");
-        await loadSection("hero", "hero.html");
-        await loadSection("team", "team.html");
-        await loadSection("footer", "footer.html");
-
-        // ✅ Initialize Swiper after all sections loaded
-        const swiper = new Swiper(".client-swiper", {
+      // Swiper initialization (only after team section loads)
+      function initializeSwiper() {
+        new Swiper(".client-swiper", {
           slidesPerView: 3,
           spaceBetween: 20,
           loop: true,
@@ -59,10 +54,27 @@
             1024: { slidesPerView: 4 },
           },
         });
-        console.log("Swiper Initialized ✅");
+        console.log("✅ Swiper initialized");
       }
 
-      initializePage();
+      // Main page loader
+      async function initializePage() {
+        // Load navbar
+        await loadSection("navbar", "navbar.html");
+        if (typeof initializeNavbar === "function") initializeNavbar();
+
+        // Load other sections
+        await loadSection("hero", "hero.html");
+
+        // Load swiper section and initialize Swiper after it's in DOM
+        await loadSection("team", "team.html");
+        initializeSwiper();
+
+        await loadSection("footer", "footer.html");
+      }
+
+      // Start loading after DOM ready
+      window.addEventListener("DOMContentLoaded", initializePage);
     </script>
   </body>
 </html>

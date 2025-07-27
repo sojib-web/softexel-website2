@@ -7,24 +7,17 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
 
-  <body
-    class="bg-gradient-to-r from-white via-blue-50 to-white relative min-h-screen"
-  >
-    <!-- Background Dot Pattern -->
-    <div
-      class="absolute inset-0 bg-[radial-gradient(#d1d5db_1px,transparent_1px)] [background-size:20px_20px] opacity-60 pointer-events-none"
-    ></div>
+  <body>
     <nav
       class="bg-white sticky top-0 z-50 shadow-sm border-b-2 border-yellow-400 px-4"
     >
-      <div class="max-w-7xl mx-auto flex justify-between items-center py-2">
+      <div class="max-w-7xl mx-auto flex justify-between items-center">
         <!-- Logo -->
         <div>
           <img
             src="/assert/Softexel web/soft.png"
             alt="Logo"
             style="width: 12.5rem; height: 5.5rem"
-            class="object-contain"
           />
         </div>
 
@@ -40,8 +33,6 @@
             stroke="currentColor"
             stroke-width="2"
             viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true"
           >
             <path
               stroke-linecap="round"
@@ -63,101 +54,105 @@
           >
 
           <!-- Services Dropdown -->
-          <div class="relative group">
-            <div class="dropdown">
-              <div tabindex="0" role="button" class="btn m-1">Click</div>
-              <ul
-                tabindex="0"
-                class="dropdown-content menu text-gray-800 font-medium hover:text-yellow-500"
+          <div class="relative">
+            <button
+              class="flex items-center text-gray-800 font-medium hover:text-yellow-500 focus:outline-none"
+              id="services-button"
+            >
+              Services
+              <svg
+                class="ml-1 w-4 h-4 text-yellow-500"
+                fill="currentColor"
+                viewBox="0 0 20 20"
               >
-                <div
-                  class="absolute mt-8 left-0 top-full hidden group-hover:grid bg-white shadow-lg border rounded-xl p-6 w-[600px] grid-cols-2 gap-6 z-50"
-                  role="menu"
-                  aria-labelledby="services-button"
-                >
-                  <div class="flex items-start gap-3">
-                    <img
-                      src="/assert/Softexel web/icons/php.png"
-                      alt="PHP"
-                      class="w-10 h-10 flex-shrink-0"
-                    />
-                    <div>
-                      <h3 class="font-bold text-gray-800">
-                        PHP & Laravel Script
-                      </h3>
-                      <p class="text-gray-500 text-sm">Dynamic web solutions</p>
-                    </div>
-                  </div>
+                <path
+                  fill-rule="evenodd"
+                  d="M5.23 7.21a.75.75 0 011.06.02L10 11.293l3.71-4.06a.75.75 0 111.08 1.04l-4.25 4.65a.75.75 0 01-1.08 0l-4.25-4.65a.75.75 0 01.02-1.06z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </button>
 
-                  <div class="flex items-start gap-3">
-                    <img
-                      src="/assert/Softexel web/icons/wordpress.png"
-                      alt="Wordpress"
-                      class="w-10 h-10 flex-shrink-0"
-                    />
-                    <div>
-                      <h3 class="font-bold text-gray-800">Wordpress</h3>
-                      <p class="text-gray-500 text-sm">
-                        User-friendly mobile apps
-                      </p>
-                    </div>
-                  </div>
-
-                  <div class="flex items-start gap-3">
-                    <img
-                      src="/assert/Softexel web/icons/html-5.png"
-                      alt="HTML"
-                      class="w-10 h-10 flex-shrink-0"
-                    />
-                    <div>
-                      <h3 class="font-bold text-gray-800">HTML Templates</h3>
-                      <p class="text-gray-500 text-sm">
-                        Intuitive user experience
-                      </p>
-                    </div>
-                  </div>
-
-                  <div class="flex items-start gap-3">
-                    <img
-                      src="/assert/Softexel web/icons/user-interface.png"
-                      alt="Apps UI"
-                      class="w-10 h-10 flex-shrink-0"
-                    />
-                    <div>
-                      <h3 class="font-bold text-gray-800">Apps UI</h3>
-                      <p class="text-gray-500 text-sm">
-                        Reliable hosting solutions
-                      </p>
-                    </div>
-                  </div>
-
-                  <div class="flex items-start gap-3">
-                    <img
-                      src="/assert/Softexel web/icons/layout.png"
-                      alt="Web UI"
-                      class="w-10 h-10 flex-shrink-0"
-                    />
-                    <div>
-                      <h3 class="font-bold text-gray-800">Web UI</h3>
-                      <p class="text-gray-500 text-sm">SEO & Ads Services</p>
-                    </div>
-                  </div>
-
-                  <div class="flex items-start gap-3">
-                    <img
-                      src="/assert/Softexel web/icons/Screenshot_3-Photoroom.png"
-                      alt="E-commerce"
-                      class="w-10 h-10 flex-shrink-0"
-                    />
-                    <div>
-                      <a href="/singlePage.html">
-                        <h3 class="font-bold text-gray-800">E-commerce</h3>
-                        <p class="text-gray-500 text-sm">Expert guidance</p>
-                      </a>
-                    </div>
-                  </div>
+            <!-- Dropdown Menu -->
+            <div
+              id="services-dropdown"
+              class="absolute left-0 top-12 hidden bg-white shadow-lg border rounded-xl p-6 w-[600px] grid grid-cols-2 gap-6 z-50"
+            >
+              <div class="flex gap-3 items-start">
+                <img
+                  src="/assert/Softexel web/icons/php.png"
+                  alt="PHP"
+                  class="w-10 h-10"
+                />
+                <div>
+                  <h3 class="font-bold text-gray-800">PHP & Laravel Script</h3>
+                  <p class="text-gray-500 text-sm">Dynamic web solutions</p>
                 </div>
-              </ul>
+              </div>
+
+              <div class="flex gap-3 items-start">
+                <img
+                  src="/assert/Softexel web/icons/wordpress.png"
+                  alt="Wordpress"
+                  class="w-10 h-10"
+                />
+                <div>
+                  <h3 class="font-bold text-gray-800">Wordpress</h3>
+                  <p class="text-gray-500 text-sm">User-friendly mobile apps</p>
+                </div>
+              </div>
+
+              <div class="flex gap-3 items-start">
+                <img
+                  src="/assert/Softexel web/icons/html-5.png"
+                  alt="HTML"
+                  class="w-10 h-10"
+                />
+                <div>
+                  <h3 class="font-bold text-gray-800">HTML Templates</h3>
+                  <p class="text-gray-500 text-sm">Intuitive user experience</p>
+                </div>
+              </div>
+
+              <div class="flex gap-3 items-start">
+                <img
+                  src="/assert/Softexel web/icons/user-interface.png"
+                  alt="Apps UI"
+                  class="w-10 h-10"
+                />
+                <div>
+                  <h3 class="font-bold text-gray-800">Apps UI</h3>
+                  <p class="text-gray-500 text-sm">
+                    Reliable hosting solutions
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex gap-3 items-start">
+                <img
+                  src="/assert/Softexel web/icons/layout.png"
+                  alt="Web UI"
+                  class="w-10 h-10"
+                />
+                <div>
+                  <h3 class="font-bold text-gray-800">Web UI</h3>
+                  <p class="text-gray-500 text-sm">SEO & Ads Services</p>
+                </div>
+              </div>
+
+              <div class="flex gap-3 items-start">
+                <img
+                  src="/assert/Softexel web/icons/Screenshot_3-Photoroom.png"
+                  alt="E-commerce"
+                  class="w-10 h-10"
+                />
+                <div>
+                  <a href="/singlePage.html">
+                    <h3 class="font-bold text-gray-800">E-commerce</h3>
+                    <p class="text-gray-500 text-sm">Expert guidance</p>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -165,11 +160,6 @@
             href="/contactPage.html"
             class="text-gray-800 font-medium hover:text-yellow-500"
             >Contact</a
-          >
-          <a
-            href="/singlePage.html"
-            class="text-gray-800 font-medium hover:text-yellow-500"
-            >Single Page</a
           >
 
           <a
@@ -183,7 +173,7 @@
       <!-- Mobile Menu -->
       <div
         id="mobile-menu"
-        class="hidden bg-white border-t border-yellow-400 shadow-lg md:hidden"
+        class="hidden md:hidden bg-white border-t border-yellow-400 shadow-lg"
       >
         <a
           href="/"
@@ -208,8 +198,6 @@
               stroke="currentColor"
               stroke-width="2"
               viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-              aria-hidden="true"
             >
               <path
                 stroke-linecap="round"
@@ -260,13 +248,48 @@
     </nav>
 
     <script>
-      // Mobile menu toggle
-      const mobileMenuBtn = document.getElementById("mobile-menu-btn");
-      const mobileMenu = document.getElementById("mobile-menu");
+      async function loadSection(id, url) {
+        try {
+          const res = await fetch(url);
+          if (!res.ok) throw new Error(`${url} not found`);
+          const html = await res.text();
+          document.getElementById(id).innerHTML = html;
+        } catch (error) {
+          console.error(error);
+        }
+      }
 
-      mobileMenuBtn.addEventListener("click", () => {
-        mobileMenu.classList.toggle("hidden");
-      });
+      async function initializePage() {
+        await loadSection("navbar", "navbar.html");
+
+        // navbar inject হওয়ার পর এখানে navbar.js এর init কল করো
+        initializeNavbar();
+
+        await loadSection("hero", "hero.html");
+        await loadSection("team", "team.html");
+        await loadSection("footer", "footer.html");
+
+        setTimeout(() => {
+          const swiper = new Swiper(".client-swiper", {
+            slidesPerView: 3,
+            spaceBetween: 20,
+            loop: true,
+            navigation: {
+              nextEl: "#nextBtn",
+              prevEl: "#prevBtn",
+            },
+            breakpoints: {
+              640: { slidesPerView: 2 },
+              1024: { slidesPerView: 4 },
+            },
+          });
+          console.log("✅ Swiper initialized");
+        }, 300);
+      }
+
+      initializePage();
     </script>
+
+    <script src="navbar.js"></script>
   </body>
 </html>
