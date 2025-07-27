@@ -235,26 +235,34 @@
       </div>
     </section>
 
-    <!-- Location Section -->
+    <!-- 📍 Location Section -->
     <section
-      class="relative z-10 px-4 py-16 md:py-20 bg-gradient-to-r from-white via-blue-50 to-white overflow-hidden"
+      class="relative z-10 px-4 max-w-7xl mx-auto py-16 md:py-24 bg-gradient-to-r from-white via-blue-50 to-white overflow-hidden"
     >
-      <!-- Background Dot Pattern -->
+      <!-- 🔵 Background Dot Pattern -->
       <div
-        class="absolute inset-0 bg-[radial-gradient(#d1d5db_1px,transparent_1px)] [background-size:20px_20px] opacity-60"
+        class="absolute inset-0 bg-[radial-gradient(#d1d5db_1px,transparent_1px)] [background-size:20px_20px] opacity-30 pointer-events-none"
       ></div>
-      <!-- Heading -->
-      <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 relative">
-        Our Location
-      </h2>
-      <div class="w-24 h-1 mx-auto bg-yellow-400 mb-8 rounded-full"></div>
 
-      <!-- Google Map -->
-      <div class="flex justify-center">
-        <div class="w-full max-w-5xl aspect-[16/9]">
+      <!-- 🧭 Section Heading -->
+      <div class="relative text-center">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">
+          Our Location
+        </h2>
+        <div class="w-24 h-1 mx-auto bg-yellow-400 rounded-full mb-10"></div>
+        <p class="text-gray-600 max-w-xl mx-auto text-base md:text-lg">
+          Come visit us at our office – we’re located in the heart of Dhaka.
+        </p>
+      </div>
+
+      <!-- 🗺️ Google Map -->
+      <div class="mt-12 flex justify-center relative z-10">
+        <div
+          class="w-full md:w-[95%] aspect-[16/9] rounded-xl overflow-hidden shadow-xl ring-1 ring-blue-200"
+        >
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3648.313645442928!2d90.40482477484694!3d23.87781498412792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c61c061e4ae3%3A0xe38a1167a78ed546!2sBdtask%20Limited!5e0!3m2!1sen!2sbd!4v1721464359990!5m2!1sen!2sbd"
-            class="w-full h-full rounded-xl shadow-lg border-0"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3650.8579446753574!2d90.37354787589787!3d23.788072387328043!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x914ba496f09760d%3A0x6e3e52814afb5346!2sSoft%20Exel!5e0!3m2!1sen!2sbd!4v1753607852707!5m2!1sen!2sbd"
+            class="w-full h-full border-0"
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
