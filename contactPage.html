@@ -1,187 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact Page</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Floating animation style -->
+    <style>
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
 
-  <!-- Floating animation style -->
-  <style>
-    @keyframes float {
-
-      0%,
-      100% {
-        transform: translateY(0);
+        50% {
+          transform: translateY(-10px);
+        }
       }
 
-      50% {
-        transform: translateY(-10px);
+      @keyframes slow-float {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+
+        50% {
+          transform: translateY(-8px);
+        }
       }
-    }
 
-    @keyframes slow-float {
-
-      0%,
-      100% {
-        transform: translateY(0);
+      .animate-float {
+        animation: float 4s ease-in-out infinite;
       }
 
-      50% {
-        transform: translateY(-8px);
+      .animate-slow-float {
+        animation: slow-float 5s ease-in-out infinite;
       }
-    }
+    </style>
+  </head>
 
-    .animate-float {
-      animation: float 4s ease-in-out infinite;
-    }
+  <body class="bg-white text-gray-800">
+    <!-- Navbar -->
+    <div id="navbar"></div>
 
-    .animate-slow-float {
-      animation: slow-float 5s ease-in-out infinite;
-    }
-  </style>
-</head>
-
-<body class="bg-white text-gray-800">
-
-  <!-- Navbar -->
-  <div id="navbar"></div>
-
-  <!-- Contact Info Cards Section -->
-  <section class="relative mx-auto max-w-7xl bg-white mt-20 py-12 px-4 sm:px-6 lg:px-8 overflow-hidden">
-    <!-- Floating Shapes -->
-    <img src="/assert/Softexel web/tp 2-01.png" alt="shape"
-      class="absolute top-8 left-0 w-16 sm:w-20 rotate-12 animate-float pointer-events-none" />
-    <img src="/assert/Softexel web/tp 3-01.png" alt="shape"
-      class="absolute top-0 right-10 w-14 sm:w-16 rotate-[30deg] animate-float pointer-events-none" />
-    <img src="/assert/Softexel web/tp 3-01.png" alt="shape"
-      class="absolute bottom-4 right-0 w-16 sm:w-20 -rotate-45 animate-float pointer-events-none" />
-
-    <!-- Heading -->
-    <h2 class="text-2xl sm:text-3xl font-bold text-center mb-10">Hello. How can we help you?</h2>
-
-    <!-- Contact Info Cards -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      <!-- Address -->
-      <div class="bg-white shadow-md rounded-xl p-6">
-        <div class="flex items-center gap-3 mb-2">
-          <img src="/assert/Softexel web/icons/address.png" alt="Address Icon" class="w-10 h-10" />
-          <h3 class="text-lg font-semibold">Our Address</h3>
-        </div>
-        <p class="text-sm text-gray-700 leading-relaxed">
-          Abrar Dimond, 568 West Shewrapara,<br />
-          Shamim Soroni, Mirpur, Dhaka,<br />
-          Bangladesh
-        </p>
+    <!-- Contact Info Cards Section -->
+    <section
+      class="relative bg-gradient-to-r from-white via-blue-50 to-white py-12 overflow-hidden"
+    >
+      <!-- Background Dot Pattern -->
+      <div
+        class="absolute inset-0 bg-[radial-gradient(#d1d5db_1px,transparent_1px)] [background-size:20px_20px] opacity-60"
+      ></div>
+      <div class="mx-auto max-w-7xl container">
+        <!-- Floating Shapes -->
+        <img
+          src="/assert/Softexel web/tp 2-01.png"
+          alt="shape"
+          class="absolute top-8 left-[270px] w-16 sm:w-20 rotate-12 animate-float pointer-events-none"
+        />
+        <img
+          src="/assert/Softexel web/tp 3-01.png"
+          alt="shape"
+          class="absolute top-0 right-[17.5rem] w-14 sm:w-16 rotate-[30deg] animate-float pointer-events-none"
+        />
+        <img
+          src="/assert/Softexel web/tp 3-01.png"
+          alt="shape"
+          class="absolute bottom-[-1rem] right-[250px] w-16 sm:w-20 -rotate-45 animate-float pointer-events-none"
+        />
       </div>
 
-      <!-- Email -->
-      <div class="bg-white shadow-md rounded-xl p-6">
-        <div class="flex items-center gap-3 mb-2">
-          <img src="/assert/Softexel web/icons/mail.png" alt="Mail Icon" class="w-10 h-10" />
-          <h3 class="text-lg font-semibold">Our Mail</h3>
-        </div>
-        <p class="text-sm text-gray-700">info@softexel.com</p>
-      </div>
+      <!-- Heading -->
+      <h2 class="text-2xl sm:text-3xl font-bold text-center mb-10 relative">
+        Hello. How can we help you?
+      </h2>
 
-      <!-- Phone -->
-      <div class="bg-white shadow-md rounded-xl p-6">
-        <div class="flex items-center gap-3 mb-2">
-          <img src="/assert/Softexel web/icons/phone.png" alt="Phone Icon" class="w-10 h-10" />
-          <h3 class="text-lg font-semibold">Our Contact</h3>
-        </div>
-        <p class="text-sm text-gray-700">+880 1645-762916</p>
-      </div>
-
-      <!-- Career -->
-      <div class="bg-white shadow-md rounded-xl p-6">
-        <div class="flex items-center gap-3 mb-2">
-          <img src="/assert/Softexel web/icons/career-path.png" alt="Career Icon" class="w-10 h-10" />
-          <h3 class="text-lg font-semibold">Our Career</h3>
-        </div>
-        <p class="text-sm text-gray-500">Explore opportunities with us</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Form Section -->
-  <section class="relative bg-white overflow-hidden py-16 px-4 sm:px-6 lg:px-20">
-    <!-- Background Shape with animation -->
-    <div class="absolute right-0 top-0 opacity-10 rotate-45 z-0 pointer-events-none">
-      <img src="/assert/Softexel web/OurMissionImg.png" alt="Background"
-        class="w-40 sm:w-64 md:w-96 animate-slow-float" />
-    </div>
-
-    <div class="relative z-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-12">
-      <!-- Left: Image + Text -->
-      <div class="space-y-6 text-center">
-        <img src="/assert/Softexel web/photos/5031659.jpg" alt="Illustration" class="w-full max-w-sm mx-auto" />
-        <p class="text-lg sm:text-xl font-medium text-black leading-relaxed">
-          <span class="font-bold">Don’t <span class="text-yellow-500">Hesitate</span> to</span>
-          <span class="font-bold"> contact</span><br />
-          <span class="font-semibold">with <span class="text-yellow-500">us</span></span> for any kind of<br />
-          information <span class="font-bold">Call us for query</span>
-        </p>
-      </div>
-
-      <!-- Right: Form -->
-      <div class="bg-white shadow-xl rounded-xl p-6 sm:p-8 w-full">
-        <form class="space-y-4">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <input type="text" placeholder="Name"
-              class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400" />
-            <input type="email" placeholder="Email"
-              class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400" />
+      <!-- Contact Info Cards -->
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 relative mx-auto max-w-7xl"
+      >
+        <!-- Address -->
+        <div class="bg-white shadow-md rounded-xl p-6">
+          <div class="flex items-center gap-3 mb-2">
+            <img
+              src="/assert/Softexel web/icons/address.png"
+              alt="Address Icon"
+              class="w-10 h-10"
+            />
+            <h3 class="text-lg font-semibold">Our Address</h3>
           </div>
-          <input type="text" placeholder="Subject"
-            class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400" />
-          <textarea placeholder="Message" rows="4"
-            class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400"></textarea>
-          <button type="submit"
-            class="w-full sm:w-auto bg-yellow-400 hover:bg-yellow-500 transition font-bold text-white px-6 py-2 rounded-md shadow-md text-center block">
-            SUBMIT
-          </button>
-        </form>
+          <p class="text-sm text-gray-700 leading-relaxed">
+            Abrar Dimond, 568 West Shewrapara,<br />
+            Shamim Soroni, Mirpur, Dhaka,<br />
+            Bangladesh
+          </p>
+        </div>
+
+        <!-- Email -->
+        <div class="bg-white shadow-md rounded-xl p-6">
+          <div class="flex items-center gap-3 mb-2">
+            <img
+              src="/assert/Softexel web/icons/mail.png"
+              alt="Mail Icon"
+              class="w-10 h-10"
+            />
+            <h3 class="text-lg font-semibold">Our Mail</h3>
+          </div>
+          <p class="text-sm text-gray-700">info@softexel.com</p>
+        </div>
+
+        <!-- Phone -->
+        <div class="bg-white shadow-md rounded-xl p-6">
+          <div class="flex items-center gap-3 mb-2">
+            <img
+              src="/assert/Softexel web/icons/phone.png"
+              alt="Phone Icon"
+              class="w-10 h-10"
+            />
+            <h3 class="text-lg font-semibold">Our Contact</h3>
+          </div>
+          <p class="text-sm text-gray-700">+880 1645-762916</p>
+        </div>
+
+        <!-- Career -->
+        <div class="bg-white shadow-md rounded-xl p-6">
+          <div class="flex items-center gap-3 mb-2">
+            <img
+              src="/assert/Softexel web/icons/career-path.png"
+              alt="Career Icon"
+              class="w-10 h-10"
+            />
+            <h3 class="text-lg font-semibold">Our Career</h3>
+          </div>
+          <p class="text-sm text-gray-500">Explore opportunities with us</p>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Location Section -->
-  <section class="relative z-10 px-4 py-16 md:py-20 overflow-hidden max-w-screen-xl mx-auto">
-    <!-- Heading -->
-    <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">Our Location</h2>
-    <div class="w-24 h-1 mx-auto bg-yellow-400 mb-8 rounded-full"></div>
-
-    <!-- Google Map -->
-    <div class="flex justify-center">
-      <div class="w-full max-w-5xl aspect-[16/9]">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3648.313645442928!2d90.40482477484694!3d23.87781498412792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c61c061e4ae3%3A0xe38a1167a78ed546!2sBdtask%20Limited!5e0!3m2!1sen!2sbd!4v1721464359990!5m2!1sen!2sbd"
-          class="w-full h-full rounded-xl shadow-lg border-0" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <!-- Contact Form Section -->
+    <section
+      class="relative bg-gradient-to-r from-white via-blue-50 to-white overflow-hidden py-16 px-4 sm:px-6 lg:px-20"
+    >
+      <!-- Background Dot Pattern -->
+      <div
+        class="absolute inset-0 bg-[radial-gradient(#d1d5db_1px,transparent_1px)] [background-size:20px_20px] opacity-60"
+      ></div>
+      <!-- Background Shape with animation -->
+      <div
+        class="absolute right-0 top-0 opacity-10 rotate-45 z-0 pointer-events-none"
+      >
+        <img
+          src="/assert/Softexel web/OurMissionImg.png"
+          alt="Background"
+          class="w-40 sm:w-64 md:w-96 animate-slow-float"
+        />
       </div>
-    </div>
-  </section>
 
-  <!-- Footer -->
-  <div id="footer"></div>
+      <div
+        class="relative z-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-12"
+      >
+        <!-- Left: Image + Text -->
+        <div class="space-y-6 text-center">
+          <img
+            src="/assert/Softexel web/photos/5031659.png"
+            alt="Illustration"
+            class="w-full mx-auto"
+          />
+          <p class="text-lg sm:text-xl font-medium text-black leading-relaxed">
+            <span class="font-bold"
+              >Don’t <span class="text-yellow-500">Hesitate</span> to</span
+            >
+            <span class="font-bold"> contact</span><br />
+            <span class="font-semibold"
+              >with <span class="text-yellow-500">us</span></span
+            >
+            for any kind of<br />
+            information <span class="font-bold">Call us for query</span>
+          </p>
+        </div>
 
-  <!-- Load Navbar & Footer -->
-  <script>
-    async function loadSection(id, url) {
-      const res = await fetch(url);
-      if (!res.ok) {
-        console.error(`Failed to load ${url}: ${res.statusText}`);
-        return;
+        <!-- Right: Form -->
+        <div class="bg-white shadow-xl rounded-xl p-6 sm:p-8 w-full">
+          <form class="space-y-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <input
+                type="text"
+                placeholder="Name"
+                class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+              />
+              <input
+                type="email"
+                placeholder="Email"
+                class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+              />
+            </div>
+            <input
+              type="text"
+              placeholder="Subject"
+              class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+            />
+            <textarea
+              placeholder="Message"
+              rows="4"
+              class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+            ></textarea>
+            <button
+              type="submit"
+              class="w-full sm:w-auto bg-yellow-400 hover:bg-yellow-500 transition font-bold text-white px-6 py-2 rounded-md shadow-md text-center block"
+            >
+              SUBMIT
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Location Section -->
+    <section
+      class="relative z-10 px-4 py-16 md:py-20 bg-gradient-to-r from-white via-blue-50 to-white overflow-hidden"
+    >
+      <!-- Background Dot Pattern -->
+      <div
+        class="absolute inset-0 bg-[radial-gradient(#d1d5db_1px,transparent_1px)] [background-size:20px_20px] opacity-60"
+      ></div>
+      <!-- Heading -->
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">
+        Our Location
+      </h2>
+      <div class="w-24 h-1 mx-auto bg-yellow-400 mb-8 rounded-full"></div>
+
+      <!-- Google Map -->
+      <div class="flex justify-center">
+        <div class="w-full max-w-5xl aspect-[16/9]">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3648.313645442928!2d90.40482477484694!3d23.87781498412792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c61c061e4ae3%3A0xe38a1167a78ed546!2sBdtask%20Limited!5e0!3m2!1sen!2sbd!4v1721464359990!5m2!1sen!2sbd"
+            class="w-full h-full rounded-xl shadow-lg border-0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- Load Navbar & Footer -->
+    <script>
+      async function loadSection(id, url) {
+        const res = await fetch(url);
+        if (!res.ok) {
+          console.error(`Failed to load ${url}: ${res.statusText}`);
+          return;
+        }
+        const html = await res.text();
+        document.getElementById(id).innerHTML = html;
       }
-      const html = await res.text();
-      document.getElementById(id).innerHTML = html;
-    }
 
-    loadSection('navbar', 'navbar.html');
-    loadSection('footer', 'footer.html');
-  </script>
-</body>
-
+      loadSection("navbar", "navbar.html");
+      loadSection("footer", "footer.html");
+    </script>
+  </body>
 </html>

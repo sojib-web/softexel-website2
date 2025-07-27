@@ -1,154 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Responsive Navbar with Mobile Toggle</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Responsive Navbar with Mobile Toggle</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
+  <body
+    class="bg-gradient-to-r from-white via-blue-50 to-white relative min-h-screen"
+  >
+    <!-- Background Dot Pattern -->
+    <div
+      class="absolute inset-0 bg-[radial-gradient(#d1d5db_1px,transparent_1px)] [background-size:20px_20px] opacity-60 pointer-events-none"
+    ></div>
+    <nav
+      class="bg-white sticky top-0 z-50 shadow-sm border-b-2 border-yellow-400 px-4"
+    >
+      <div class="max-w-7xl mx-auto flex justify-between items-center py-2">
+        <!-- Logo -->
+        <div>
+          <img
+            src="/assert/Softexel web/soft.png"
+            alt="Logo"
+            style="width: 12.5rem; height: 5.5rem"
+            class="object-contain"
+          />
+        </div>
 
-<body>
-  <nav class="bg-white sticky top-0 z-50 shadow-sm border-b-2 border-yellow-400 px-4">
-    <div class="max-w-7xl mx-auto flex justify-between items-center">
+        <!-- Hamburger button (mobile) -->
+        <button
+          id="mobile-menu-btn"
+          class="md:hidden focus:outline-none"
+          aria-label="Toggle menu"
+        >
+          <svg
+            class="w-8 h-8 text-yellow-500"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
 
-      <!-- Logo -->
-      <div>
-        <img src="/assert/Softexel web/soft.png" alt="Logo" style="width: 12.5rem; height: 5.5rem;" />
-      </div>
+        <!-- Desktop Menu -->
+        <div id="desktop-menu" class="hidden md:flex items-center space-x-8">
+          <a href="/" class="text-gray-800 font-medium hover:text-yellow-500"
+            >Home</a
+          >
+          <a
+            href="/aboutPage.html"
+            class="text-gray-800 font-medium hover:text-yellow-500"
+            >About</a
+          >
 
-      <!-- Hamburger button (mobile) -->
-      <button id="mobile-menu-btn" class="md:hidden focus:outline-none" aria-label="Toggle menu">
-        <svg class="w-8 h-8 text-yellow-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
-        </svg>
-      </button>
+          <!-- Services Dropdown -->
+          <div class="relative group">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn m-1">Click</div>
+              <ul
+                tabindex="0"
+                class="dropdown-content menu text-gray-800 font-medium hover:text-yellow-500"
+              >
+                <div
+                  class="absolute mt-8 left-0 top-full hidden group-hover:grid bg-white shadow-lg border rounded-xl p-6 w-[600px] grid-cols-2 gap-6 z-50"
+                  role="menu"
+                  aria-labelledby="services-button"
+                >
+                  <div class="flex items-start gap-3">
+                    <img
+                      src="/assert/Softexel web/icons/php.png"
+                      alt="PHP"
+                      class="w-10 h-10 flex-shrink-0"
+                    />
+                    <div>
+                      <h3 class="font-bold text-gray-800">
+                        PHP & Laravel Script
+                      </h3>
+                      <p class="text-gray-500 text-sm">Dynamic web solutions</p>
+                    </div>
+                  </div>
 
-      <!-- Desktop Menu -->
-      <div id="desktop-menu" class="hidden md:flex items-center space-x-8">
-        <a href="/" class="text-gray-800 font-medium hover:text-yellow-500">Home</a>
-        <a href="/aboutPage.html" class="text-gray-800 font-medium hover:text-yellow-500">About</a>
+                  <div class="flex items-start gap-3">
+                    <img
+                      src="/assert/Softexel web/icons/wordpress.png"
+                      alt="Wordpress"
+                      class="w-10 h-10 flex-shrink-0"
+                    />
+                    <div>
+                      <h3 class="font-bold text-gray-800">Wordpress</h3>
+                      <p class="text-gray-500 text-sm">
+                        User-friendly mobile apps
+                      </p>
+                    </div>
+                  </div>
 
-        <!-- Services Dropdown -->
-        <div class="relative group">
-          <button class="flex items-center text-gray-800 font-medium hover:text-yellow-500 focus:outline-none"
-            aria-haspopup="true" aria-expanded="false" id="services-button">
-            Services
-            <svg class="ml-1 w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-              <path fill-rule="evenodd"
-                d="M5.23 7.21a.75.75 0 011.06.02L10 11.293l3.71-4.06a.75.75 0 111.08 1.04l-4.25 4.65a.75.75 0 01-1.08 0l-4.25-4.65a.75.75 0 01.02-1.06z"
-                clip-rule="evenodd" />
-            </svg>
-          </button>
+                  <div class="flex items-start gap-3">
+                    <img
+                      src="/assert/Softexel web/icons/html-5.png"
+                      alt="HTML"
+                      class="w-10 h-10 flex-shrink-0"
+                    />
+                    <div>
+                      <h3 class="font-bold text-gray-800">HTML Templates</h3>
+                      <p class="text-gray-500 text-sm">
+                        Intuitive user experience
+                      </p>
+                    </div>
+                  </div>
 
-          <!-- Dropdown Menu -->
-          <div
-            class="absolute left-0 top-12 hidden group-hover:grid bg-white shadow-lg border rounded-xl p-6 w-[600px] grid-cols-2 gap-6 z-50"
-            aria-label="submenu" role="menu" aria-labelledby="services-button">
-            <div class="flex gap-3 items-start">
-              <img src="/assert/Softexel web/icons/php.png" alt="PHP" class="w-10 h-10" />
-              <div>
-                <h3 class="font-bold text-gray-800">PHP & Laravel Script</h3>
-                <p class="text-gray-500 text-sm">Dynamic web solutions</p>
-              </div>
-            </div>
+                  <div class="flex items-start gap-3">
+                    <img
+                      src="/assert/Softexel web/icons/user-interface.png"
+                      alt="Apps UI"
+                      class="w-10 h-10 flex-shrink-0"
+                    />
+                    <div>
+                      <h3 class="font-bold text-gray-800">Apps UI</h3>
+                      <p class="text-gray-500 text-sm">
+                        Reliable hosting solutions
+                      </p>
+                    </div>
+                  </div>
 
-            <div class="flex gap-3 items-start">
-              <img src="/assert/Softexel web/icons/wordpress.png" alt="Wordpress" class="w-10 h-10" />
-              <div>
-                <h3 class="font-bold text-gray-800">Wordpress</h3>
-                <p class="text-gray-500 text-sm">User-friendly mobile apps</p>
-              </div>
-            </div>
+                  <div class="flex items-start gap-3">
+                    <img
+                      src="/assert/Softexel web/icons/layout.png"
+                      alt="Web UI"
+                      class="w-10 h-10 flex-shrink-0"
+                    />
+                    <div>
+                      <h3 class="font-bold text-gray-800">Web UI</h3>
+                      <p class="text-gray-500 text-sm">SEO & Ads Services</p>
+                    </div>
+                  </div>
 
-            <div class="flex gap-3 items-start">
-              <img src="/assert/Softexel web/icons/html-5.png" alt="HTML" class="w-10 h-10" />
-              <div>
-                <h3 class="font-bold text-gray-800">HTML Templates</h3>
-                <p class="text-gray-500 text-sm">Intuitive user experience</p>
-              </div>
-            </div>
-
-            <div class="flex gap-3 items-start">
-              <img src="/assert/Softexel web/icons/user-interface.png" alt="Apps UI" class="w-10 h-10" />
-              <div>
-                <h3 class="font-bold text-gray-800">Apps UI</h3>
-                <p class="text-gray-500 text-sm">Reliable hosting solutions</p>
-              </div>
-            </div>
-
-            <div class="flex gap-3 items-start">
-              <img src="/assert/Softexel web/icons/layout.png" alt="Web UI" class="w-10 h-10" />
-              <div>
-                <h3 class="font-bold text-gray-800">Web UI</h3>
-                <p class="text-gray-500 text-sm">SEO & Ads Services</p>
-              </div>
-            </div>
-
-            <div class="flex gap-3 items-start">
-              <img src="/assert/Softexel web/icons/Screenshot_3-Photoroom.png" alt="E-commerce" class="w-10 h-10" />
-              <div>
-                <h3 class="font-bold text-gray-800">E-commerce</h3>
-                <p class="text-gray-500 text-sm">Expert guidance</p>
-              </div>
+                  <div class="flex items-start gap-3">
+                    <img
+                      src="/assert/Softexel web/icons/Screenshot_3-Photoroom.png"
+                      alt="E-commerce"
+                      class="w-10 h-10 flex-shrink-0"
+                    />
+                    <div>
+                      <a href="/singlePage.html">
+                        <h3 class="font-bold text-gray-800">E-commerce</h3>
+                        <p class="text-gray-500 text-sm">Expert guidance</p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </ul>
             </div>
           </div>
+
+          <a
+            href="/contactPage.html"
+            class="text-gray-800 font-medium hover:text-yellow-500"
+            >Contact</a
+          >
+          <a
+            href="/singlePage.html"
+            class="text-gray-800 font-medium hover:text-yellow-500"
+            >Single Page</a
+          >
+
+          <a
+            href="#"
+            class="bg-gradient-to-r from-yellow-400 to-yellow-500 text-white px-5 py-2 rounded-lg font-bold shadow hover:from-yellow-500 hover:to-yellow-600 transition"
+            >Book a meeting</a
+          >
         </div>
-
-        <a href="/contactPage.html" class="text-gray-800 font-medium hover:text-yellow-500">Contact</a>
-        <a href="/singlePage.html" class="text-gray-800 font-medium hover:text-yellow-500">Single Page</a>
-
-        <a href="#"
-          class="bg-gradient-to-r from-yellow-400 to-yellow-500 text-white px-5 py-2 rounded-lg font-bold shadow hover:from-yellow-500 hover:to-yellow-600 transition">Book
-          a meeting</a>
       </div>
-    </div>
 
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-yellow-400 shadow-lg">
-      <a href="/" class="block px-4 py-3 text-gray-800 font-medium hover:bg-yellow-100">Home</a>
-      <a href="/aboutPage.html" class="block px-4 py-3 text-gray-800 font-medium hover:bg-yellow-100">About</a>
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="hidden bg-white border-t border-yellow-400 shadow-lg md:hidden"
+      >
+        <a
+          href="/"
+          class="block px-4 py-3 text-gray-800 font-medium hover:bg-yellow-100"
+          >Home</a
+        >
+        <a
+          href="/aboutPage.html"
+          class="block px-4 py-3 text-gray-800 font-medium hover:bg-yellow-100"
+          >About</a
+        >
 
-      <!-- Mobile Services Accordion -->
-      <details class="group border-t border-yellow-400">
-        <summary
-          class="flex justify-between items-center px-4 py-3 cursor-pointer text-gray-800 font-medium hover:bg-yellow-100">
-          Services
-          <svg class="w-4 h-4 text-yellow-500 group-open:rotate-180 transition-transform" fill="none"
-            stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"></path>
-          </svg>
-        </summary>
-        <div class="px-4 py-3 grid grid-cols-1 gap-4">
-          <a href="#" class="block px-2 py-1 rounded hover:bg-yellow-100">PHP & Laravel Script</a>
-          <a href="#" class="block px-2 py-1 rounded hover:bg-yellow-100">Wordpress</a>
-          <a href="#" class="block px-2 py-1 rounded hover:bg-yellow-100">HTML Templates</a>
-          <a href="#" class="block px-2 py-1 rounded hover:bg-yellow-100">Apps UI</a>
-          <a href="#" class="block px-2 py-1 rounded hover:bg-yellow-100">Web UI</a>
-          <a href="#" class="block px-2 py-1 rounded hover:bg-yellow-100">E-commerce</a>
-        </div>
-      </details>
+        <!-- Mobile Services Accordion -->
+        <details class="group border-t border-yellow-400">
+          <summary
+            class="flex justify-between items-center px-4 py-3 cursor-pointer text-gray-800 font-medium hover:bg-yellow-100"
+          >
+            Services
+            <svg
+              class="w-4 h-4 text-yellow-500 group-open:rotate-180 transition-transform"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 9l6 6 6-6"
+              ></path>
+            </svg>
+          </summary>
+          <div class="px-4 py-3 grid grid-cols-1 gap-4">
+            <a href="#" class="block px-2 py-1 rounded hover:bg-yellow-100"
+              >PHP & Laravel Script</a
+            >
+            <a href="#" class="block px-2 py-1 rounded hover:bg-yellow-100"
+              >Wordpress</a
+            >
+            <a href="#" class="block px-2 py-1 rounded hover:bg-yellow-100"
+              >HTML Templates</a
+            >
+            <a href="#" class="block px-2 py-1 rounded hover:bg-yellow-100"
+              >Apps UI</a
+            >
+            <a href="#" class="block px-2 py-1 rounded hover:bg-yellow-100"
+              >Web UI</a
+            >
+            <a href="#" class="block px-2 py-1 rounded hover:bg-yellow-100"
+              >E-commerce</a
+            >
+          </div>
+        </details>
 
-      <a href="/contactPage.html" class="block px-4 py-3 text-gray-800 font-medium hover:bg-yellow-100">Contact</a>
-      <a href="/singlePage.html" class="block px-4 py-3 text-gray-800 font-medium hover:bg-yellow-100">Single Page</a>
+        <a
+          href="/contactPage.html"
+          class="block px-4 py-3 text-gray-800 font-medium hover:bg-yellow-100"
+          >Contact</a
+        >
+        <a
+          href="/singlePage.html"
+          class="block px-4 py-3 text-gray-800 font-medium hover:bg-yellow-100"
+          >Single Page</a
+        >
 
-      <a href="#"
-        class="block mx-4 my-3 bg-gradient-to-r from-yellow-400 to-yellow-500 text-white px-5 py-2 rounded-lg font-bold shadow text-center hover:from-yellow-500 hover:to-yellow-600 transition">Book
-        a meeting</a>
-    </div>
-  </nav>
+        <a
+          href="#"
+          class="block mx-4 my-3 bg-gradient-to-r from-yellow-400 to-yellow-500 text-white px-5 py-2 rounded-lg font-bold shadow text-center hover:from-yellow-500 hover:to-yellow-600 transition"
+          >Book a meeting</a
+        >
+      </div>
+    </nav>
 
-  <script>
-    // Mobile menu toggle
-    const mobileMenuBtn = document.getElementById("mobile-menu-btn");
-    const mobileMenu = document.getElementById("mobile-menu");
+    <script>
+      // Mobile menu toggle
+      const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
 
-    mobileMenuBtn.addEventListener("click", () => {
-      mobileMenu.classList.toggle("hidden");
-    });
-  </script>
-</body>
-
+      mobileMenuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    </script>
+  </body>
 </html>
