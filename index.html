@@ -12,11 +12,13 @@
     <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
   </head>
 
-  <body class="bg-gradient-to-r from-white via-blue-50 to-white">
+  <body class="">
     <!-- Section Containers -->
     <div id="navbar"></div>
     <div id="hero"></div>
-    <div id="team" class="mt-20"></div>
+    <div id="team" class=""></div>
+    <div id="bookAmetting" class=""></div>
+
     <div id="footer"></div>
 
     <!-- ✅ Load Swiper JS -->
@@ -69,6 +71,9 @@
         // Load swiper section and initialize Swiper after it's in DOM
         await loadSection("team", "team.html");
         initializeSwiper();
+
+        // await loadSection("bookAmetting", "bookAmetting.html");
+        // initializeSwiper();
 
         await loadSection("footer", "footer.html");
       }

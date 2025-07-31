@@ -83,31 +83,15 @@
             >
               <div class="flex gap-3 items-start">
                 <img
-                  src="/assert/Softexel web/icons/php.png"
+                  src="/assert/Softexel web/icons/mobile-marketing.png"
                   alt="PHP"
                   class="w-10 h-10"
                 />
                 <div>
-                  <a href="/digitalMarketing.html">
-                    <h3 class="font-bold text-gray-800">
-                      PHP & Laravel Script
-                    </h3>
-                    <p class="text-gray-500 text-sm">Dynamic web solutions</p>
-                  </a>
-                </div>
-              </div>
-
-              <div class="flex gap-3 items-start">
-                <img
-                  src="/assert/Softexel web/icons/wordpress.png"
-                  alt="Wordpress"
-                  class="w-10 h-10"
-                />
-                <div>
-                  <a href="/domainHosting.html">
-                    <h3 class="font-bold text-gray-800">Wordpress</h3>
+                  <a href="/webUI.html">
+                    <h3 class="font-bold text-gray-800">Web Application</h3>
                     <p class="text-gray-500 text-sm">
-                      User-friendly mobile apps
+                      Creating dynamic web solutions for your business
                     </p>
                   </a>
                 </div>
@@ -115,13 +99,32 @@
 
               <div class="flex gap-3 items-start">
                 <img
-                  src="/assert/Softexel web/icons/html-5.png"
+                  src="/assert/Softexel web/icons/cloud-hosting.png"
+                  alt="Wordpress"
+                  class="w-10 h-10"
+                />
+                <div>
+                  <a href="/domainHosting.html">
+                    <h3 class="font-bold text-gray-800">Domain & Hosting</h3>
+                    <p class="text-gray-500 text-sm">
+                      Providing reliable domain registration and hosting
+                      services
+                    </p>
+                  </a>
+                </div>
+              </div>
+
+              <div class="flex gap-3 items-start">
+                <img
+                  src="/assert/Softexel web/icons/feature-selection.png"
                   alt="HTML"
                   class="w-10 h-10"
                 />
                 <div>
-                  <h3 class="font-bold text-gray-800">HTML Templates</h3>
-                  <p class="text-gray-500 text-sm">Intuitive user experience</p>
+                  <h3 class="font-bold text-gray-800">Digital Marketing</h3>
+                  <p class="text-gray-500 text-sm">
+                    Driving online growth through strategic marketing solutions
+                  </p>
                 </div>
               </div>
 
@@ -133,9 +136,9 @@
                 />
                 <div>
                   <a href="/uIServices.html">
-                    <h3 class="font-bold text-gray-800">Apps UI</h3>
+                    <h3 class="font-bold text-gray-800">UI/UX Design</h3>
                     <p class="text-gray-500 text-sm">
-                      Reliable hosting solutions
+                      Crafting intuitive designs for optimal user experiences
                     </p>
                   </a>
                 </div>
@@ -149,8 +152,10 @@
                 />
                 <div>
                   <a href="/webUI.html">
-                    <h3 class="font-bold text-gray-800">Web UI</h3>
-                    <p class="text-gray-500 text-sm">SEO & Ads Services</p>
+                    <h3 class="font-bold text-gray-800">Tech Consultancy</h3>
+                    <p class="text-gray-500 text-sm">
+                      Offering expert guidance for technical challenge
+                    </p>
                   </a>
                 </div>
               </div>
@@ -163,8 +168,12 @@
                 />
                 <div>
                   <a href="/singlePage.html">
-                    <h3 class="font-bold text-gray-800">E-commerce</h3>
-                    <p class="text-gray-500 text-sm">Expert guidance</p>
+                    <h3 class="font-bold text-gray-800">
+                      E-commerce Solutions
+                    </h3>
+                    <p class="text-gray-500 text-sm">
+                      Unlock smarter selling with expert insight
+                    </p>
                   </a>
                 </div>
               </div>
@@ -178,7 +187,7 @@
           >
 
           <a
-            href="#"
+            href="/bookAmetting.html"
             class="bg-gradient-to-r from-yellow-400 to-yellow-500 text-white px-5 py-2 rounded-lg font-bold shadow hover:from-yellow-500 hover:to-yellow-600 transition"
             >Book a meeting</a
           >
@@ -188,7 +197,7 @@
       <!-- Mobile Menu -->
       <div
         id="mobile-menu"
-        class="hidden md:hidden bg-white border-t border-yellow-400 shadow-lg"
+        class="hidden md:hidden bg-white border-t border-yellow-400 shadow-lg py-5"
       >
         <a
           href="/"
@@ -202,7 +211,7 @@
         >
 
         <!-- Mobile Services Accordion -->
-        <details class="group border-t border-yellow-400">
+        <details class="group">
           <summary
             class="flex justify-between items-center px-4 py-3 cursor-pointer text-gray-800 font-medium hover:bg-yellow-100"
           >
@@ -255,7 +264,7 @@
         >
 
         <a
-          href="#"
+          href="/bookAmetting.html"
           class="block mx-4 my-3 bg-gradient-to-r from-yellow-400 to-yellow-500 text-white px-5 py-2 rounded-lg font-bold shadow text-center hover:from-yellow-500 hover:to-yellow-600 transition"
           >Book a meeting</a
         >
@@ -282,6 +291,9 @@
 
         await loadSection("hero", "hero.html");
         await loadSection("team", "team.html");
+
+        await loadSection("bookAmetting", "bookAmetting.html");
+
         await loadSection("footer", "footer.html");
 
         setTimeout(() => {
